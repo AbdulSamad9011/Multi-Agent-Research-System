@@ -4,6 +4,19 @@
   "graph": {},
   "nodes": [
     {
+      "id": "src_research_agent_config_settings",
+      "label": "Settings",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "code",
+      "norm_label": "settings",
+      "source_file": "src/research_agent/config.py",
+      "source_location": "L21"
+    },
+    {
       "id": "src_research_agent_state_researchertask",
       "label": "ResearcherTask",
       "_callable": true,
@@ -15,19 +28,6 @@
       "norm_label": "researchertask",
       "source_file": "src/research_agent/state.py",
       "source_location": "L51"
-    },
-    {
-      "id": "src_research_agent_state_researchplan",
-      "label": "ResearchPlan",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "graph.py",
-      "file_type": "code",
-      "norm_label": "researchplan",
-      "source_file": "src/research_agent/state.py",
-      "source_location": "L31"
     },
     {
       "id": "src_research_agent_state_researchstate",
@@ -43,19 +43,6 @@
       "source_location": "L58"
     },
     {
-      "id": "src_research_agent_state_subtopic",
-      "label": "SubTopic",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "graph.py",
-      "file_type": "code",
-      "norm_label": "subtopic",
-      "source_file": "src/research_agent/state.py",
-      "source_location": "L16"
-    },
-    {
       "id": "src_research_agent_state_subagentfindings",
       "label": "SubAgentFindings",
       "_callable": true,
@@ -69,29 +56,30 @@
       "source_location": "L38"
     },
     {
-      "id": "src_research_agent_config_settings",
-      "label": "Settings",
+      "id": "src_research_agent_state_researchplan",
+      "label": "ResearchPlan",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "config.py",
+      "community": 26,
+      "community_name": "state.py",
       "file_type": "code",
-      "norm_label": "settings",
-      "source_file": "src/research_agent/config.py",
-      "source_location": "L21"
+      "norm_label": "researchplan",
+      "source_file": "src/research_agent/state.py",
+      "source_location": "L31"
     },
     {
-      "id": "src_research_agent_agents_planner_build_planner",
-      "label": "build_planner()",
+      "id": "src_research_agent_state_subtopic",
+      "label": "SubTopic",
       "_callable": true,
+      "_callable_class": true,
       "_origin": "ast",
-      "community": 0,
-      "community_name": "graph.py",
+      "community": 26,
+      "community_name": "state.py",
       "file_type": "code",
-      "norm_label": "build_planner()",
-      "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L29"
+      "norm_label": "subtopic",
+      "source_file": "src/research_agent/state.py",
+      "source_location": "L16"
     },
     {
       "id": "src_research_agent_agents_summarizer_build_summarizer",
@@ -142,6 +130,30 @@
       "source_location": "L20"
     },
     {
+      "id": "src_research_agent_rag_retriever_tool_build_rag_tool",
+      "label": "build_rag_tool()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "code",
+      "norm_label": "build_rag_tool()",
+      "source_file": "src/research_agent/rag/retriever_tool.py",
+      "source_location": "L11"
+    },
+    {
+      "id": "src_research_agent_tools_web_search_build_web_search_tool",
+      "label": "build_web_search_tool()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "code",
+      "norm_label": "build_web_search_tool()",
+      "source_file": "src/research_agent/tools/web_search.py",
+      "source_location": "L14"
+    },
+    {
       "id": "src_research_agent_rag_ingest_build_vectorstore",
       "label": "build_vectorstore()",
       "_callable": true,
@@ -178,6 +190,18 @@
       "source_location": "L57"
     },
     {
+      "id": "src_research_agent_agents_researcher_content_to_text",
+      "label": "_content_to_text()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "researcher.py",
+      "file_type": "code",
+      "norm_label": "_content_to_text()",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L145"
+    },
+    {
       "id": "src_research_agent_agents_researcher_extract_findings",
       "label": "_extract_findings()",
       "_callable": true,
@@ -187,7 +211,7 @@
       "file_type": "code",
       "norm_label": "_extract_findings()",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L124"
+      "source_location": "L167"
     },
     {
       "id": "src_research_agent_agents_researcher_fallback_findings",
@@ -199,7 +223,7 @@
       "file_type": "code",
       "norm_label": "_fallback_findings()",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L175"
+      "source_location": "L218"
     },
     {
       "id": "src_research_agent_agents_researcher_looks_complete",
@@ -211,19 +235,7 @@
       "file_type": "code",
       "norm_label": "_looks_complete()",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L165"
-    },
-    {
-      "id": "src_research_agent_config_build_chat_model",
-      "label": "build_chat_model()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "researcher.py",
-      "file_type": "code",
-      "norm_label": "build_chat_model()",
-      "source_file": "src/research_agent/config.py",
-      "source_location": "L85"
+      "source_location": "L208"
     },
     {
       "id": "src_research_agent_agents_retry_call_with_model_rotation",
@@ -286,16 +298,16 @@
       "source_location": "L33"
     },
     {
-      "id": "app_main",
-      "label": "main()",
+      "id": "app_empty_result",
+      "label": "_empty_result()",
       "_callable": true,
       "_origin": "ast",
       "community": 25,
       "community_name": "app.py",
       "file_type": "code",
-      "norm_label": "main()",
+      "norm_label": "_empty_result()",
       "source_file": "app.py",
-      "source_location": "L123"
+      "source_location": "L41"
     },
     {
       "id": "app_render_findings",
@@ -307,7 +319,7 @@
       "file_type": "code",
       "norm_label": "_render_findings()",
       "source_file": "app.py",
-      "source_location": "L49"
+      "source_location": "L60"
     },
     {
       "id": "app_render_plan",
@@ -319,7 +331,7 @@
       "file_type": "code",
       "norm_label": "_render_plan()",
       "source_file": "app.py",
-      "source_location": "L42"
+      "source_location": "L53"
     },
     {
       "id": "app_render_report",
@@ -331,7 +343,19 @@
       "file_type": "code",
       "norm_label": "_render_report()",
       "source_file": "app.py",
-      "source_location": "L67"
+      "source_location": "L79"
+    },
+    {
+      "id": "app_render_result",
+      "label": "_render_result()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "_render_result()",
+      "source_file": "app.py",
+      "source_location": "L125"
     },
     {
       "id": "app_run",
@@ -343,31 +367,31 @@
       "file_type": "code",
       "norm_label": "_run()",
       "source_file": "app.py",
-      "source_location": "L72"
+      "source_location": "L84"
     },
     {
-      "id": "src_research_agent_rag_retriever_tool_build_rag_tool",
-      "label": "build_rag_tool()",
+      "id": "src_research_agent_agents_planner_build_planner",
+      "label": "build_planner()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "config.py",
+      "community": 26,
+      "community_name": "state.py",
       "file_type": "code",
-      "norm_label": "build_rag_tool()",
-      "source_file": "src/research_agent/rag/retriever_tool.py",
-      "source_location": "L11"
+      "norm_label": "build_planner()",
+      "source_file": "src/research_agent/agents/planner.py",
+      "source_location": "L29"
     },
     {
-      "id": "src_research_agent_tools_web_search_build_web_search_tool",
-      "label": "build_web_search_tool()",
+      "id": "src_research_agent_config_build_chat_model",
+      "label": "build_chat_model()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "config.py",
+      "community": 26,
+      "community_name": "state.py",
       "file_type": "code",
-      "norm_label": "build_web_search_tool()",
-      "source_file": "src/research_agent/tools/web_search.py",
-      "source_location": "L14"
+      "norm_label": "build_chat_model()",
+      "source_file": "src/research_agent/config.py",
+      "source_location": "L85"
     },
     {
       "id": "opencode_plugins_graphify_graphifyplugin",
@@ -382,17 +406,6 @@
       "source_location": "L12"
     },
     {
-      "id": "basemodel",
-      "label": "BaseModel",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "graph.py",
-      "file_type": "code",
-      "norm_label": "basemodel",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "send",
       "label": "Send",
       "_origin": "ast",
@@ -404,17 +417,6 @@
       "source_location": ""
     },
     {
-      "id": "src_research_agent_agents_planner",
-      "label": "planner.py",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "graph.py",
-      "file_type": "code",
-      "norm_label": "planner.py",
-      "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L1"
-    },
-    {
       "id": "src_research_agent_agents_summarizer",
       "label": "summarizer.py",
       "_origin": "ast",
@@ -423,6 +425,17 @@
       "file_type": "code",
       "norm_label": "summarizer.py",
       "source_file": "src/research_agent/agents/summarizer.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_research_agent_config",
+      "label": "config.py",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "code",
+      "norm_label": "config.py",
+      "source_file": "src/research_agent/config.py",
       "source_location": "L1"
     },
     {
@@ -448,15 +461,59 @@
       "source_location": "L1"
     },
     {
-      "id": "src_research_agent_state",
-      "label": "state.py",
+      "id": "src_research_agent_rag_retriever_tool",
+      "label": "retriever_tool.py",
       "_origin": "ast",
       "community": 0,
       "community_name": "graph.py",
       "file_type": "code",
-      "norm_label": "state.py",
-      "source_file": "src/research_agent/state.py",
+      "norm_label": "retriever_tool.py",
+      "source_file": "src/research_agent/rag/retriever_tool.py",
       "source_location": "L1"
+    },
+    {
+      "id": "src_research_agent_rag_retriever_tool_py_basetool",
+      "label": "BaseTool",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "code",
+      "norm_label": "basetool",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_research_agent_rag_retriever_tool_py_inmemoryvectorstore",
+      "label": "InMemoryVectorStore",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "code",
+      "norm_label": "inmemoryvectorstore",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_research_agent_tools_web_search",
+      "label": "web_search.py",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "code",
+      "norm_label": "web_search.py",
+      "source_file": "src/research_agent/tools/web_search.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tavilysearch",
+      "label": "TavilySearch",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "code",
+      "norm_label": "tavilysearch",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "typeddict",
@@ -470,17 +527,6 @@
       "source_location": ""
     },
     {
-      "id": "src_research_agent_agents_planner_rationale_1",
-      "label": "Planner node: turns the user query into a ResearchPlan (3-4 subtopics).\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "graph.py",
-      "file_type": "rationale",
-      "norm_label": "planner node: turns the user query into a researchplan (3-4 subtopics)....",
-      "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L1"
-    },
-    {
       "id": "src_research_agent_agents_summarizer_rationale_1",
       "label": "Summarizer node: synthesizes all sub-agent findings into one report.",
       "_origin": "ast",
@@ -489,6 +535,17 @@
       "file_type": "rationale",
       "norm_label": "summarizer node: synthesizes all sub-agent findings into one report.",
       "source_file": "src/research_agent/agents/summarizer.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_research_agent_config_rationale_1",
+      "label": "Central configuration for models, providers, and runtime knobs. All values are\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "rationale",
+      "norm_label": "central configuration for models, providers, and runtime knobs. all values are...",
+      "source_file": "src/research_agent/config.py",
       "source_location": "L1"
     },
     {
@@ -536,37 +593,15 @@
       "source_location": "L1"
     },
     {
-      "id": "src_research_agent_state_rationale_1",
-      "label": "Shared graph state schema. `ResearchState` is the top-level state threaded\u2026",
+      "id": "src_research_agent_rag_retriever_tool_rationale_1",
+      "label": "Wraps the RAG vector store as a LangChain tool the sub-agents can call.",
       "_origin": "ast",
       "community": 0,
       "community_name": "graph.py",
       "file_type": "rationale",
-      "norm_label": "shared graph state schema. `researchstate` is the top-level state threaded...",
-      "source_file": "src/research_agent/state.py",
+      "norm_label": "wraps the rag vector store as a langchain tool the sub-agents can call.",
+      "source_file": "src/research_agent/rag/retriever_tool.py",
       "source_location": "L1"
-    },
-    {
-      "id": "src_research_agent_state_rationale_17",
-      "label": "One slice of the research plan, assigned to one sub-agent.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "graph.py",
-      "file_type": "rationale",
-      "norm_label": "one slice of the research plan, assigned to one sub-agent.",
-      "source_file": "src/research_agent/state.py",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_research_agent_state_rationale_32",
-      "label": "Structured output of the planner node.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "graph.py",
-      "file_type": "rationale",
-      "norm_label": "structured output of the planner node.",
-      "source_file": "src/research_agent/state.py",
-      "source_location": "L32"
     },
     {
       "id": "src_research_agent_state_rationale_52",
@@ -589,6 +624,17 @@
       "norm_label": "top-level graph state.",
       "source_file": "src/research_agent/state.py",
       "source_location": "L59"
+    },
+    {
+      "id": "src_research_agent_tools_web_search_rationale_1",
+      "label": "Live web search tool for sub-agents. Requires TAVILY_API_KEY in the\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "rationale",
+      "norm_label": "live web search tool for sub-agents. requires tavily_api_key in the...",
+      "source_file": "src/research_agent/tools/web_search.py",
+      "source_location": "L1"
     },
     {
       "id": "opencode_skills_graphify_skill_part_a_structural_extraction_for_code_files",
@@ -1334,7 +1380,18 @@
       "source_location": "L1"
     },
     {
-      "id": "src_research_agent_agents_researcher_rationale_125",
+      "id": "src_research_agent_agents_researcher_rationale_146",
+      "label": "Normalize a message's `content` (str, list of blocks, or None) to text.",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "researcher.py",
+      "file_type": "rationale",
+      "norm_label": "normalize a message's `content` (str, list of blocks, or none) to text.",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L146"
+    },
+    {
+      "id": "src_research_agent_agents_researcher_rationale_168",
       "label": "Normalize the researcher's text into SubAgentFindings. The researcher's text-\u2026",
       "_origin": "ast",
       "community": 22,
@@ -1342,10 +1399,10 @@
       "file_type": "rationale",
       "norm_label": "normalize the researcher's text into subagentfindings. the researcher's text-...",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L125"
+      "source_location": "L168"
     },
     {
-      "id": "src_research_agent_agents_researcher_rationale_166",
+      "id": "src_research_agent_agents_researcher_rationale_209",
       "label": "Reject extraction outputs that echo junk instead of real findings.",
       "_origin": "ast",
       "community": 22,
@@ -1353,7 +1410,7 @@
       "file_type": "rationale",
       "norm_label": "reject extraction outputs that echo junk instead of real findings.",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L166"
+      "source_location": "L209"
     },
     {
       "id": "src_research_agent_agents_researcher_rationale_58",
@@ -1365,17 +1422,6 @@
       "norm_label": "factory for the `researcher` graph node (see module docstring).",
       "source_file": "src/research_agent/agents/researcher.py",
       "source_location": "L58"
-    },
-    {
-      "id": "src_research_agent_config_rationale_86",
-      "label": "Instantiate a chat model from a \"provider:model\" string. `init_chat_model` has\u2026",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "researcher.py",
-      "file_type": "rationale",
-      "norm_label": "instantiate a chat model from a \"provider:model\" string. `init_chat_model` has...",
-      "source_file": "src/research_agent/config.py",
-      "source_location": "L86"
     },
     {
       "id": "src_research_agent_state_rationale_39",
@@ -1493,114 +1539,103 @@
       "source_location": "L34"
     },
     {
-      "id": "app_rationale_73",
-      "label": "Execute the graph, streaming node-level progress into the UI.",
+      "id": "app_rationale_85",
+      "label": "Execute the graph, streaming node-level progress. Never raises.",
       "_origin": "ast",
       "community": 25,
       "community_name": "app.py",
       "file_type": "rationale",
-      "norm_label": "execute the graph, streaming node-level progress into the ui.",
+      "norm_label": "execute the graph, streaming node-level progress. never raises.",
       "source_file": "app.py",
-      "source_location": "L73"
+      "source_location": "L85"
     },
     {
-      "id": "src_research_agent_config",
-      "label": "config.py",
+      "id": "basemodel",
+      "label": "BaseModel",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "config.py",
+      "community": 26,
+      "community_name": "state.py",
       "file_type": "code",
-      "norm_label": "config.py",
+      "norm_label": "basemodel",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_research_agent_agents_planner",
+      "label": "planner.py",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "state.py",
+      "file_type": "code",
+      "norm_label": "planner.py",
+      "source_file": "src/research_agent/agents/planner.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_research_agent_state",
+      "label": "state.py",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "state.py",
+      "file_type": "code",
+      "norm_label": "state.py",
+      "source_file": "src/research_agent/state.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_research_agent_agents_planner_rationale_1",
+      "label": "Planner node: turns the user query into a ResearchPlan (3-4 subtopics).\u2026",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "state.py",
+      "file_type": "rationale",
+      "norm_label": "planner node: turns the user query into a researchplan (3-4 subtopics)....",
+      "source_file": "src/research_agent/agents/planner.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_research_agent_config_rationale_86",
+      "label": "Instantiate a chat model from a \"provider:model\" string. `init_chat_model` has\u2026",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "state.py",
+      "file_type": "rationale",
+      "norm_label": "instantiate a chat model from a \"provider:model\" string. `init_chat_model` has...",
       "source_file": "src/research_agent/config.py",
-      "source_location": "L1"
+      "source_location": "L86"
     },
     {
-      "id": "src_research_agent_rag_retriever_tool",
-      "label": "retriever_tool.py",
+      "id": "src_research_agent_state_rationale_1",
+      "label": "Shared graph state schema. `ResearchState` is the top-level state threaded\u2026",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "config.py",
-      "file_type": "code",
-      "norm_label": "retriever_tool.py",
-      "source_file": "src/research_agent/rag/retriever_tool.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_research_agent_rag_retriever_tool_py_basetool",
-      "label": "BaseTool",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "config.py",
-      "file_type": "code",
-      "norm_label": "basetool",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_research_agent_rag_retriever_tool_py_inmemoryvectorstore",
-      "label": "InMemoryVectorStore",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "config.py",
-      "file_type": "code",
-      "norm_label": "inmemoryvectorstore",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_research_agent_tools_web_search",
-      "label": "web_search.py",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "config.py",
-      "file_type": "code",
-      "norm_label": "web_search.py",
-      "source_file": "src/research_agent/tools/web_search.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "tavilysearch",
-      "label": "TavilySearch",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "config.py",
-      "file_type": "code",
-      "norm_label": "tavilysearch",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_research_agent_config_rationale_1",
-      "label": "Central configuration for models, providers, and runtime knobs. All values are\u2026",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "config.py",
+      "community": 26,
+      "community_name": "state.py",
       "file_type": "rationale",
-      "norm_label": "central configuration for models, providers, and runtime knobs. all values are...",
-      "source_file": "src/research_agent/config.py",
+      "norm_label": "shared graph state schema. `researchstate` is the top-level state threaded...",
+      "source_file": "src/research_agent/state.py",
       "source_location": "L1"
     },
     {
-      "id": "src_research_agent_rag_retriever_tool_rationale_1",
-      "label": "Wraps the RAG vector store as a LangChain tool the sub-agents can call.",
+      "id": "src_research_agent_state_rationale_17",
+      "label": "One slice of the research plan, assigned to one sub-agent.",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "config.py",
+      "community": 26,
+      "community_name": "state.py",
       "file_type": "rationale",
-      "norm_label": "wraps the rag vector store as a langchain tool the sub-agents can call.",
-      "source_file": "src/research_agent/rag/retriever_tool.py",
-      "source_location": "L1"
+      "norm_label": "one slice of the research plan, assigned to one sub-agent.",
+      "source_file": "src/research_agent/state.py",
+      "source_location": "L17"
     },
     {
-      "id": "src_research_agent_tools_web_search_rationale_1",
-      "label": "Live web search tool for sub-agents. Requires TAVILY_API_KEY in the\u2026",
+      "id": "src_research_agent_state_rationale_32",
+      "label": "Structured output of the planner node.",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "config.py",
+      "community": 26,
+      "community_name": "state.py",
       "file_type": "rationale",
-      "norm_label": "live web search tool for sub-agents. requires tavily_api_key in the...",
-      "source_file": "src/research_agent/tools/web_search.py",
-      "source_location": "L1"
+      "norm_label": "structured output of the planner node.",
+      "source_file": "src/research_agent/state.py",
+      "source_location": "L32"
     },
     {
       "id": "opencode_skills_graphify_skill",
@@ -1928,19 +1963,7 @@
   ],
   "links": [
     {
-      "source": "app_main",
-      "target": "app_run",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app.py",
-      "source_location": "L142",
-      "weight": 1.0
-    },
-    {
-      "source": "app_run",
+      "source": "app_render_result",
       "target": "app_render_plan",
       "relation": "calls",
       "_origin": "ast",
@@ -1948,11 +1971,11 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.py",
-      "source_location": "L110",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
-      "source": "app_run",
+      "source": "app_render_result",
       "target": "app_render_findings",
       "relation": "calls",
       "_origin": "ast",
@@ -1960,11 +1983,11 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.py",
-      "source_location": "L111",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
-      "source": "app_run",
+      "source": "app_render_result",
       "target": "app_render_report",
       "relation": "calls",
       "_origin": "ast",
@@ -1972,7 +1995,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.py",
-      "source_location": "L113",
+      "source_location": "L132",
+      "weight": 1.0
+    },
+    {
+      "source": "app_run",
+      "target": "app_empty_result",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app.py",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -1984,7 +2019,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.py",
-      "source_location": "L74",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -1996,7 +2031,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.py",
-      "source_location": "L85",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -2032,7 +2067,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L79",
+      "source_location": "L100",
       "weight": 1.0
     },
     {
@@ -2044,7 +2079,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L91",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher_build_researcher_node",
+      "target": "src_research_agent_state_subagentfindings",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
@@ -2056,7 +2103,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L134",
+      "source_location": "L177",
       "weight": 1.0
     },
     {
@@ -2068,7 +2115,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L151",
+      "source_location": "L194",
       "weight": 1.0
     },
     {
@@ -2080,7 +2127,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L154",
+      "source_location": "L197",
       "weight": 1.0
     },
     {
@@ -2092,7 +2139,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L158",
+      "source_location": "L201",
       "weight": 1.0
     },
     {
@@ -2104,7 +2151,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L176",
+      "source_location": "L219",
       "weight": 1.0
     },
     {
@@ -2584,7 +2631,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app.py",
-      "source_location": "L22",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -2596,7 +2643,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app.py",
-      "source_location": "L23",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -2608,7 +2655,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app.py",
-      "source_location": "L24",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -2924,13 +2971,13 @@
     },
     {
       "source": "app",
-      "target": "app_main",
+      "target": "app_render_result",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L123",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
@@ -2946,13 +2993,24 @@
     },
     {
       "source": "app",
+      "target": "app_empty_result",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.py",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
       "target": "app_render_plan",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L42",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -2963,7 +3021,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L49",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -2974,7 +3032,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L67",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -2985,7 +3043,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L72",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -3661,13 +3719,24 @@
     },
     {
       "source": "src_research_agent_agents_researcher",
+      "target": "src_research_agent_agents_researcher_content_to_text",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher",
       "target": "src_research_agent_agents_researcher_extract_findings",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L124",
+      "source_location": "L167",
       "weight": 1.0
     },
     {
@@ -3678,7 +3747,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L165",
+      "source_location": "L208",
       "weight": 1.0
     },
     {
@@ -3689,7 +3758,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L175",
+      "source_location": "L218",
       "weight": 1.0
     },
     {
@@ -3990,14 +4059,14 @@
       "weight": 1.0
     },
     {
-      "source": "app_rationale_73",
+      "source": "app_rationale_85",
       "target": "app_run",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L73",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -4034,25 +4103,36 @@
       "weight": 1.0
     },
     {
-      "source": "src_research_agent_agents_researcher_rationale_125",
+      "source": "src_research_agent_agents_researcher_rationale_146",
+      "target": "src_research_agent_agents_researcher_content_to_text",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher_rationale_168",
       "target": "src_research_agent_agents_researcher_extract_findings",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L125",
+      "source_location": "L168",
       "weight": 1.0
     },
     {
-      "source": "src_research_agent_agents_researcher_rationale_166",
+      "source": "src_research_agent_agents_researcher_rationale_209",
       "target": "src_research_agent_agents_researcher_looks_complete",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L166",
+      "source_location": "L209",
       "weight": 1.0
     },
     {
@@ -4299,18 +4379,6 @@
       "weight": 1.0
     },
     {
-      "source": "app_render_findings",
-      "target": "src_research_agent_state_subagentfindings",
-      "relation": "uses",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "context": "generic_arg",
-      "source_file": "app.py",
-      "source_location": "L49",
-      "weight": 0.8
-    },
-    {
       "source": "app_render_plan",
       "target": "src_research_agent_state_researchplan",
       "relation": "uses",
@@ -4319,7 +4387,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "app.py",
-      "source_location": "L42",
+      "source_location": "L53",
       "weight": 0.8
     },
     {
@@ -4331,7 +4399,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L165",
+      "source_location": "L208",
       "weight": 0.8
     },
     {
@@ -4355,7 +4423,7 @@
       "confidence_score": 0.95,
       "context": "return_type",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L124",
+      "source_location": "L167",
       "weight": 0.8
     },
     {
@@ -4366,18 +4434,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "app.py",
-      "source_location": "L86",
-      "weight": 0.8
-    },
-    {
-      "source": "app_run",
-      "target": "src_research_agent_state_subagentfindings",
-      "relation": "uses",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "app.py",
-      "source_location": "L87",
+      "source_location": "L105",
       "weight": 0.8
     },
     {
@@ -4437,5 +4494,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "5afa60df79900cec8239b58e1e21dfbe70386759"
+  "built_at_commit": "45dfa784b3f5297d804a0dc2991da005cfbed747"
 }

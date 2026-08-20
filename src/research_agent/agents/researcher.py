@@ -60,6 +60,27 @@ def build_researcher_node(tools: List[BaseTool]):
     tool_by_name = {t.name: t for t in tools}
 
     def researcher_node(task: ResearcherTask) -> dict:
+        """Per-branch entry. Never lets one branch's failure abort the run."""
+        subtopic = task["subtopic"]
+        try:
+            return _run_researcher(task)
+        except Exception as exc:  # noqa: BLE001 - degrade instead of aborting fan-in
+            msg = f"{type(exc).__name__}: {exc}"
+            print(f"[researcher] {subtopic.title} FAILED: {msg}")
+            return {
+                "research_results": [
+                    SubAgentFindings(
+                        subtopic_id=subtopic.id,
+                        title=f"{subtopic.title} (failed)",
+                        key_findings=[f"Researcher sub-agent failed: {msg}"],
+                        sources=[],
+                        confidence=0.0,
+                        raw_notes=None,
+                    )
+                ]
+            }
+
+    def _run_researcher(task: ResearcherTask) -> dict:
         subtopic = task["subtopic"]
         messages: list = [
             SystemMessage(
@@ -108,8 +129,8 @@ def build_researcher_node(tools: List[BaseTool]):
                     ToolMessage(content=str(output)[:4000], tool_call_id=call["id"])
                 )
 
-        final_text = messages[-1].content if messages else ""
-        if not final_text or not final_text.strip() or len(final_text.strip()) < 20:
+        final_text = _content_to_text(messages[-1].content if messages else None)
+        if not final_text.strip() or len(final_text.strip()) < 20:
             print(f"[researcher] {subtopic.title}: final answer too short ({len(final_text)} chars); "
                   f"wrapping without extraction")
             findings = _fallback_findings(subtopic, final_text)
@@ -119,6 +140,28 @@ def build_researcher_node(tools: List[BaseTool]):
         return {"research_results": [findings]}
 
     return researcher_node
+
+
+def _content_to_text(content) -> str:
+    """Normalize a message's `content` (str, list of blocks, or None) to text."""
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        parts: list[str] = []
+        for block in content:
+            if isinstance(block, str):
+                parts.append(block)
+            elif isinstance(block, dict):
+                if block.get("type") == "text":
+                    parts.append(block.get("text", ""))
+                elif block.get("type") == "tool_use":
+                    parts.append(f"[tool call: {block.get('name', '')}]")
+            elif hasattr(block, "text"):
+                parts.append(str(block.text))
+        return "\n".join(p for p in parts if p)
+    if content is None:
+        return ""
+    return str(content)
 
 
 def _extract_findings(subtopic, final_text: str) -> SubAgentFindings:

@@ -30,9 +30,9 @@
     "semantic_hash": ""
   },
   "src/research_agent/agents/researcher.py": {
-    "mtime": 1787241327.9738035,
-    "seen": 1787241372.5461938,
-    "ast_hash": "457b7d3316620b2246d30ed94756be14",
+    "mtime": 1787241979.9257824,
+    "seen": 1787242246.9884412,
+    "ast_hash": "1920590b6c77fa7b356ff2cc5148c7c3",
     "semantic_hash": ""
   },
   "src/research_agent/agents/summarizer.py": {
@@ -180,9 +180,9 @@
     "semantic_hash": ""
   },
   "app.py": {
-    "mtime": 1787241317.0725658,
-    "seen": 1787241372.5461838,
-    "ast_hash": "21284415368d8fa7e9bfd0043efff8fe",
+    "mtime": 1787242015.3260536,
+    "seen": 1787242246.9884324,
+    "ast_hash": "8fb517a96be86d2a0d46c54159f14342",
     "semantic_hash": ""
   }
 }
