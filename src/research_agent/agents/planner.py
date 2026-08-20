@@ -5,11 +5,10 @@ agent — planning doesn't need tools, just good decomposition.
 """
 from __future__ import annotations
 
-from langchain.chat_models import init_chat_model
 from langchain_core.messages import HumanMessage, SystemMessage
 
 from research_agent.agents._retry import call_with_model_rotation
-from research_agent.config import settings
+from research_agent.config import build_chat_model, settings
 from research_agent.state import ResearchPlan, ResearchState
 
 _PLANNER_SYSTEM_PROMPT = """You are the lead researcher on a team of specialist \
@@ -28,13 +27,12 @@ another subtopic's findings to be researched.""".format(
 
 
 def build_planner():
-    # method="json_schema" is the most portable structured-output mode across
-    # providers. The default function-calling method is unsupported/unreliable
-    # on several Groq models ("Tool choice is required, but model did not call
-    # a tool" / tool_use_failed / json_validate_failed).
+    # method="json_schema" is the portable structured-output mode; the default
+    # function-calling method is unreliable on several Groq models.
     def make_structured(model_str: str):
-        model = init_chat_model(model_str)
-        return model.with_structured_output(ResearchPlan, method="json_schema")
+        return build_chat_model(model_str).with_structured_output(
+            ResearchPlan, method="json_schema"
+        )
 
     def invoke_planner(structured_model, system_prompt: str, query: str) -> ResearchPlan:
         return structured_model.invoke(

@@ -6,9 +6,9 @@
     "semantic_hash": "b33d000860642c6f4907a877e0387a21"
   },
   "pyproject.toml": {
-    "mtime": 1787216355.286313,
-    "seen": 1787216549.2734916,
-    "ast_hash": "78f12457a2e4d71b9fa053f531a748a6",
+    "mtime": 1787238550.4797559,
+    "seen": 1787238643.6395452,
+    "ast_hash": "bd439d22ae926b47a1a0063f7cf61382",
     "semantic_hash": ""
   },
   "src/research_agent/__init__.py": {
@@ -24,15 +24,15 @@
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "src/research_agent/agents/planner.py": {
-    "mtime": 1787219035.6622083,
-    "seen": 1787219653.8200483,
-    "ast_hash": "6fc45613cfbf097a2e51b88fc937622a",
+    "mtime": 1787244758.0877407,
+    "seen": 1787244818.146667,
+    "ast_hash": "16311d08fabcfee4d7ff7b0071ac89ca",
     "semantic_hash": ""
   },
   "src/research_agent/agents/researcher.py": {
-    "mtime": 1787219208.0917342,
-    "seen": 1787219653.82005,
-    "ast_hash": "9ae9265d804a89c4ce36bdd8b52c513a",
+    "mtime": 1787244753.1444106,
+    "seen": 1787244818.1466682,
+    "ast_hash": "a5426faacd1fbc240e9bfc3c38f38232",
     "semantic_hash": ""
   },
   "src/research_agent/agents/summarizer.py": {
@@ -42,9 +42,9 @@
     "semantic_hash": "309916ae909d81bdf5b093dbee302bf9"
   },
   "src/research_agent/config.py": {
-    "mtime": 1787219215.899616,
-    "seen": 1787219653.82015,
-    "ast_hash": "c264146788a71203250413b201e6072e",
+    "mtime": 1787244735.782437,
+    "seen": 1787244818.1466715,
+    "ast_hash": "16222c977dfbdd7750aa858f893a8dc4",
     "semantic_hash": ""
   },
   "src/research_agent/graph.py": {
@@ -54,9 +54,9 @@
     "semantic_hash": "5105099109bac3232bb0180d04663da8"
   },
   "src/research_agent/main.py": {
-    "mtime": 1787218919.0362656,
-    "seen": 1787219653.820251,
-    "ast_hash": "423fd39ede96345fcca87caac1d36fe6",
+    "mtime": 1787244282.9456,
+    "seen": 1787244352.6009548,
+    "ast_hash": "08b72d749180b183c72a4ce7fda34957",
     "semantic_hash": ""
   },
   "src/research_agent/rag/__init__.py": {
@@ -156,27 +156,45 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787198212.9098747,
-    "seen": 1787216549.28024,
-    "ast_hash": "bd8e9c6422ace16158aed330ec43c97f",
+    "mtime": 1787222757.7446394,
+    "seen": 1787235663.3443117,
+    "ast_hash": "4749200ea96ad3d16cf7dce46886f47f",
     "semantic_hash": ""
   },
   "src/research_agent/agents/_retry.py": {
-    "mtime": 1787219192.4761205,
-    "seen": 1787219653.8200457,
-    "ast_hash": "750d2fa60aadfc10353c88b868069af2",
+    "mtime": 1787244762.544938,
+    "seen": 1787244818.1466656,
+    "ast_hash": "d65e7a48c3c8c78833635d6e7d884f28",
     "semantic_hash": ""
   },
   ".opencode/opencode.json": {
-    "mtime": 1787220558.8676882,
-    "seen": 1787220628.581908,
-    "ast_hash": "1efe24ecf938911d4f23e4b1c6ec91f7",
+    "mtime": 1787222320.5781138,
+    "seen": 1787235663.3442624,
+    "ast_hash": "19a51febeea85351e9fcc679b3df35f4",
     "semantic_hash": ""
   },
   ".opencode/command/graph.md": {
-    "mtime": 1787220380.9285965,
-    "seen": 1787220628.5819404,
-    "ast_hash": "729350bba07605d8db4d06ee25c998ff",
+    "mtime": 1787222320.5771053,
+    "seen": 1787235663.344297,
+    "ast_hash": "6c97c07099c9fc5fadd13294c2c93d95",
+    "semantic_hash": ""
+  },
+  "app.py": {
+    "mtime": 1787244793.5628371,
+    "seen": 1787244818.1466572,
+    "ast_hash": "aaafbe1727765d7ec615e815c2abc1f8",
+    "semantic_hash": ""
+  },
+  "kb/MRI_Brain_Tumor_Detection.md": {
+    "mtime": 1787243305.964683,
+    "seen": 1787244352.6009827,
+    "ast_hash": "b18652b1b2e01152598db927ec361f26",
+    "semantic_hash": ""
+  },
+  "kb/1-s2.0-S2665917424000023-main_260818121504.pdf": {
+    "mtime": 1787243140.0018806,
+    "seen": 1787244352.600984,
+    "ast_hash": "5e441c7881a0134dcd32f213341011db",
     "semantic_hash": ""
   }
 }
