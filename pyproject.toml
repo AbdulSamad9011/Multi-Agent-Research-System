@@ -1,0 +1,22 @@
+[project]
+name = "research-agent"
+version = "0.1.0"
+description = "Multi-agent research system: planner -> parallel sub-agents -> summarizer (LangGraph + LangChain create_agent)"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=1.1",
+    "langgraph>=1.1",
+    "langchain-tavily>=0.2",
+    "langchain-text-splitters>=0.3",
+    "langchain-openai>=0.3",
+    "langchain-anthropic>=0.3",
+    "python-dotenv>=1.0",
+    "pydantic>=2.7",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

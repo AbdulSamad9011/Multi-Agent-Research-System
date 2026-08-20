@@ -1,0 +1,255 @@
+{
+  "communities": {
+    "0": [
+      "src_research_agent_agents_planner",
+      "src_research_agent_agents_planner_build_planner",
+      "src_research_agent_agents_planner_rationale_1",
+      "src_research_agent_agents_summarizer",
+      "src_research_agent_agents_summarizer_build_summarizer",
+      "src_research_agent_agents_summarizer_rationale_1",
+      "src_research_agent_graph",
+      "src_research_agent_graph_rationale_1",
+      "src_research_agent_state",
+      "src_research_agent_state_rationale_1",
+      "src_research_agent_state_rationale_32",
+      "src_research_agent_state_rationale_59",
+      "src_research_agent_state_researchplan",
+      "src_research_agent_state_researchstate"
+    ],
+    "1": [
+      "basemodel",
+      "src_research_agent_agents_researcher",
+      "src_research_agent_agents_researcher_build_researcher_node",
+      "src_research_agent_agents_researcher_py_basetool",
+      "src_research_agent_agents_researcher_rationale_1",
+      "src_research_agent_agents_researcher_rationale_33",
+      "src_research_agent_state_rationale_17",
+      "src_research_agent_state_rationale_39",
+      "src_research_agent_state_subagentfindings",
+      "src_research_agent_state_subtopic"
+    ],
+    "2": [
+      "document",
+      "path",
+      "src_research_agent_rag_ingest",
+      "src_research_agent_rag_ingest_build_vectorstore",
+      "src_research_agent_rag_ingest_load_source_documents",
+      "src_research_agent_rag_ingest_py_inmemoryvectorstore",
+      "src_research_agent_rag_ingest_rationale_1",
+      "src_research_agent_rag_ingest_rationale_25",
+      "src_research_agent_rag_ingest_rationale_39"
+    ],
+    "3": [
+      "src_research_agent_config",
+      "src_research_agent_config_rationale_1",
+      "src_research_agent_config_settings",
+      "src_research_agent_tools_web_search",
+      "src_research_agent_tools_web_search_build_web_search_tool",
+      "src_research_agent_tools_web_search_rationale_1",
+      "tavilysearch"
+    ],
+    "4": [
+      "send",
+      "src_research_agent_graph_rationale_20",
+      "src_research_agent_graph_route_to_researchers",
+      "src_research_agent_state_rationale_52",
+      "src_research_agent_state_researchertask",
+      "typeddict"
+    ],
+    "5": [
+      "src_research_agent_graph_build_graph",
+      "src_research_agent_graph_rationale_39",
+      "src_research_agent_main",
+      "src_research_agent_main_rationale_1",
+      "src_research_agent_main_run"
+    ],
+    "6": [
+      "src_research_agent_rag_retriever_tool",
+      "src_research_agent_rag_retriever_tool_build_rag_tool",
+      "src_research_agent_rag_retriever_tool_py_basetool",
+      "src_research_agent_rag_retriever_tool_py_inmemoryvectorstore",
+      "src_research_agent_rag_retriever_tool_rationale_1"
+    ],
+    "7": [
+      "opencode_plugins_graphify",
+      "opencode_plugins_graphify_graphifyplugin",
+      "opencode_plugins_graphify_rationale_4"
+    ],
+    "8": [
+      "pkg_research_agent"
+    ],
+    "9": [
+      "src_research_agent_agents_init"
+    ],
+    "10": [
+      "src_research_agent_init"
+    ],
+    "11": [
+      "src_research_agent_rag_init"
+    ],
+    "12": [
+      "src_research_agent_tools_init"
+    ]
+  },
+  "cohesion": {
+    "0": 0.26373626373626374,
+    "1": 0.2222222222222222,
+    "2": 0.2777777777777778,
+    "3": 0.2857142857142857,
+    "4": 0.3333333333333333,
+    "5": 0.5,
+    "6": 0.4,
+    "7": 0.6666666666666666,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0
+  },
+  "gods": [
+    {
+      "id": "src_research_agent_graph_build_graph",
+      "label": "build_graph()",
+      "degree": 12
+    },
+    {
+      "id": "src_research_agent_state_researchstate",
+      "label": "ResearchState",
+      "degree": 10
+    },
+    {
+      "id": "src_research_agent_state_researchertask",
+      "label": "ResearcherTask",
+      "degree": 7
+    },
+    {
+      "id": "src_research_agent_agents_researcher_build_researcher_node",
+      "label": "build_researcher_node()",
+      "degree": 7
+    },
+    {
+      "id": "src_research_agent_rag_ingest_build_vectorstore",
+      "label": "build_vectorstore()",
+      "degree": 7
+    },
+    {
+      "id": "src_research_agent_graph_route_to_researchers",
+      "label": "route_to_researchers()",
+      "degree": 6
+    },
+    {
+      "id": "src_research_agent_state_researchplan",
+      "label": "ResearchPlan",
+      "degree": 5
+    },
+    {
+      "id": "src_research_agent_state_subagentfindings",
+      "label": "SubAgentFindings",
+      "degree": 5
+    },
+    {
+      "id": "src_research_agent_agents_planner_build_planner",
+      "label": "build_planner()",
+      "degree": 5
+    },
+    {
+      "id": "src_research_agent_rag_ingest_load_source_documents",
+      "label": "load_source_documents()",
+      "degree": 5
+    }
+  ],
+  "surprises": [
+    {
+      "source": "build_graph()",
+      "target": "ResearchState",
+      "source_files": [
+        "src/research_agent/graph.py",
+        "src/research_agent/state.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "route_to_researchers()",
+      "target": "ResearchState",
+      "source_files": [
+        "src/research_agent/graph.py",
+        "src/research_agent/state.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "build_researcher_node()",
+      "target": "ResearcherTask",
+      "source_files": [
+        "src/research_agent/agents/researcher.py",
+        "src/research_agent/state.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "build_planner()",
+      "target": "ResearchPlan",
+      "source_files": [
+        "src/research_agent/agents/planner.py",
+        "src/research_agent/state.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "build_planner()",
+      "target": "ResearchState",
+      "source_files": [
+        "src/research_agent/agents/planner.py",
+        "src/research_agent/state.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `build_vectorstore()` connect `build_vectorstore` to `graph.py`, `build_graph`?",
+      "why": "High betweenness centrality (0.118) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `build_graph()` connect `build_graph` to `graph.py`, `researcher.py`, `build_vectorstore`, `config.py`, `ResearcherTask`, `build_rag_tool`?",
+      "why": "High betweenness centrality (0.116) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `build_researcher_node()` connect `researcher.py` to `graph.py`, `ResearcherTask`, `build_graph`?",
+      "why": "High betweenness centrality (0.075) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 2 inferred relationships involving `build_graph()` (e.g. with `route_to_researchers()` and `ResearchState`) actually correct?",
+      "why": "`build_graph()` has 2 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 4 inferred relationships involving `ResearchState` (e.g. with `build_planner()` and `build_summarizer()`) actually correct?",
+      "why": "`ResearchState` has 4 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 2 inferred relationships involving `build_researcher_node()` (e.g. with `ResearcherTask` and `SubAgentFindings`) actually correct?",
+      "why": "`build_researcher_node()` has 2 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Settings`, `research-agent` to the rest of the system?",
+      "why": "2 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

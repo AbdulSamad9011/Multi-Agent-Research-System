@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: research-agent
+Version: 0.1.0
+Summary: Multi-agent research system: planner -> parallel sub-agents -> summarizer (LangGraph + LangChain create_agent)
+Requires-Python: >=3.11
+Requires-Dist: langchain>=1.1
+Requires-Dist: langgraph>=1.1
+Requires-Dist: langchain-tavily>=0.2
+Requires-Dist: langchain-text-splitters>=0.3
+Requires-Dist: langchain-openai>=0.3
+Requires-Dist: langchain-anthropic>=0.3
+Requires-Dist: python-dotenv>=1.0
+Requires-Dist: pydantic>=2.7

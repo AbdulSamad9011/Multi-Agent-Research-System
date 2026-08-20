@@ -1,0 +1,98 @@
+{
+  ".opencode/plugins/graphify.js": {
+    "mtime": 1787215569.8585932,
+    "seen": 1787215598.7030673,
+    "ast_hash": "b33d000860642c6f4907a877e0387a21",
+    "semantic_hash": "b33d000860642c6f4907a877e0387a21"
+  },
+  "pyproject.toml": {
+    "mtime": 1787198212.9098747,
+    "seen": 1787215598.7030802,
+    "ast_hash": "53cfd37f9d4614dad47dabe12aab9f69",
+    "semantic_hash": "53cfd37f9d4614dad47dabe12aab9f69"
+  },
+  "src/research_agent/__init__.py": {
+    "mtime": 1787198212.9576585,
+    "seen": 1787215598.7030895,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "src/research_agent/agents/__init__.py": {
+    "mtime": 1787198212.989549,
+    "seen": 1787215598.7030926,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "src/research_agent/agents/planner.py": {
+    "mtime": 1787198213.0144742,
+    "seen": 1787215598.7030952,
+    "ast_hash": "9474ed893333b4fa37211f5afc5d3f47",
+    "semantic_hash": "9474ed893333b4fa37211f5afc5d3f47"
+  },
+  "src/research_agent/agents/researcher.py": {
+    "mtime": 1787198213.007272,
+    "seen": 1787215598.703098,
+    "ast_hash": "66fbec2d0eda4ea3cc1b01eb0b9dfcb5",
+    "semantic_hash": "66fbec2d0eda4ea3cc1b01eb0b9dfcb5"
+  },
+  "src/research_agent/agents/summarizer.py": {
+    "mtime": 1787198212.9983506,
+    "seen": 1787215598.7031012,
+    "ast_hash": "309916ae909d81bdf5b093dbee302bf9",
+    "semantic_hash": "309916ae909d81bdf5b093dbee302bf9"
+  },
+  "src/research_agent/config.py": {
+    "mtime": 1787198212.9576585,
+    "seen": 1787215598.7031038,
+    "ast_hash": "426f3b4bfa194c6f709415524f207f75",
+    "semantic_hash": "426f3b4bfa194c6f709415524f207f75"
+  },
+  "src/research_agent/graph.py": {
+    "mtime": 1787198212.977415,
+    "seen": 1787215598.7031064,
+    "ast_hash": "5105099109bac3232bb0180d04663da8",
+    "semantic_hash": "5105099109bac3232bb0180d04663da8"
+  },
+  "src/research_agent/main.py": {
+    "mtime": 1787198212.9494977,
+    "seen": 1787215598.7031088,
+    "ast_hash": "a1f2884aad084aeed0edfb23f72d4820",
+    "semantic_hash": "a1f2884aad084aeed0edfb23f72d4820"
+  },
+  "src/research_agent/rag/__init__.py": {
+    "mtime": 1787198213.0204608,
+    "seen": 1787215598.7031114,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "src/research_agent/rag/ingest.py": {
+    "mtime": 1787198213.0364497,
+    "seen": 1787215598.7031145,
+    "ast_hash": "77ece3eb7cb9f9bb4902df3c4ecaca3c",
+    "semantic_hash": "77ece3eb7cb9f9bb4902df3c4ecaca3c"
+  },
+  "src/research_agent/rag/retriever_tool.py": {
+    "mtime": 1787198213.0204608,
+    "seen": 1787215598.703117,
+    "ast_hash": "ca79b4d71cefebae84b44efa148454d8",
+    "semantic_hash": "ca79b4d71cefebae84b44efa148454d8"
+  },
+  "src/research_agent/state.py": {
+    "mtime": 1787198212.9723916,
+    "seen": 1787215598.703119,
+    "ast_hash": "d64cca88fe04498086ac4492ec484567",
+    "semantic_hash": "d64cca88fe04498086ac4492ec484567"
+  },
+  "src/research_agent/tools/__init__.py": {
+    "mtime": 1787198213.052411,
+    "seen": 1787215598.7031217,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "src/research_agent/tools/web_search.py": {
+    "mtime": 1787198213.0741751,
+    "seen": 1787215598.7031243,
+    "ast_hash": "1b2180a380af9323a6d2f7c3ded1963c",
+    "semantic_hash": "1b2180a380af9323a6d2f7c3ded1963c"
+  }
+}
