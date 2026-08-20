@@ -1,8 +1,12 @@
 [project]
 name = "research-agent"
 version = "0.1.0"
-description = "Multi-agent research system: planner -> parallel sub-agents -> summarizer (LangGraph + LangChain create_agent)"
+description = "A stateful multi-agent research system built with LangGraph: planner -> parallel sub-agents -> summarizer."
+readme = "README.md"
 requires-python = ">=3.11"
+authors = [
+    { name = "Abdul Samad", email = "samadfaridi812@gmail.com" }
+]
 dependencies = [
     "langchain>=1.1",
     "langgraph>=1.1",
