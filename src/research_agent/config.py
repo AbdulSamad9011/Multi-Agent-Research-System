@@ -80,6 +80,9 @@ class Settings:
 
     rag_top_k: int = int(os.getenv("RAG_TOP_K", 5))
     tavily_max_results: int = int(os.getenv("TAVILY_MAX_RESULTS", 5))
+    # Folder ingested into the RAG vector store on every run (.txt/.md files).
+    # Empty string disables the knowledge base (researchers use web only).
+    rag_source_dir: str = os.getenv("RAG_SOURCE_DIR", "kb").strip()
 
 
 def build_chat_model(model_str: str):

@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import time
 import uuid
+from pathlib import Path
 
 import streamlit as st
 
@@ -28,6 +29,30 @@ st.set_page_config(page_title="Multi-Agent Research Studio", page_icon=":materia
 from research_agent.config import settings  # noqa: E402
 from research_agent.graph import build_graph  # noqa: E402
 from research_agent.state import ResearchPlan, SubAgentFindings  # noqa: E402
+
+_PROJECT_ROOT = Path(__file__).resolve().parent
+_INGESTIBLE = {".txt", ".md"}
+_IGNORED_KB_DIRS = {".git", ".opencode", "graphify-out", "src"}
+
+
+def _kb_dir_candidates() -> list[str]:
+    """Top-level folders (one level deep) that contain ingestible files."""
+    found: list[str] = []
+    for sub in sorted(_PROJECT_ROOT.iterdir()):
+        if not sub.is_dir() or sub.name.startswith(".") or sub.name in _IGNORED_KB_DIRS:
+            continue
+        if any(p.suffix.lower() in _INGESTIBLE for p in sub.iterdir()):
+            found.append(sub.name)
+    return found
+
+
+def _count_ingestible(path: str) -> int:
+    base = Path(path)
+    if not base.is_absolute():
+        base = _PROJECT_ROOT / base
+    if not base.is_dir():
+        return 0
+    return sum(1 for p in base.rglob("*") if p.is_file() and p.suffix.lower() in _INGESTIBLE)
 
 
 def _apply_overrides() -> None:
@@ -141,12 +166,34 @@ def _render_result(result: dict) -> None:
 # --- Sidebar -----------------------------------------------------------------
 with st.sidebar:
     st.header("Runtime knobs")
-    st.text_input(
-        "RAG knowledge-base dir",
-        key="rag_dir",
-        placeholder="e.g. ./kb - leave empty to use web only",
-        help="Folder of .txt/.md files seeded into the in-memory vector store.",
+
+    candidates = _kb_dir_candidates()
+    human = ["(none - web search only)", *candidates]
+    kb_default = settings.rag_source_dir or "kb"
+    kb_index = (candidates.index(kb_default) + 1) if kb_default in candidates else 0
+    rag_choice = st.selectbox("Knowledge base (RAG)", human, index=kb_index)
+
+    custom_kb = st.text_input(
+        "Custom KB folder (overrides dropdown)",
+        key="rag_custom",
+        placeholder="leave empty to use the dropdown",
+        help="Relative (e.g. kb) or absolute path to a folder of .txt/.md files.",
     )
+    if custom_kb.strip():
+        rag_dir = custom_kb.strip()
+    elif rag_choice.startswith("(none"):
+        rag_dir = None
+    else:
+        rag_dir = rag_choice
+
+    if rag_dir:
+        n = _count_ingestible(rag_dir)
+        if n:
+            st.caption(f"Uses `{rag_dir}` - {n} ingestible file(s)")
+        else:
+            st.caption(f"`{rag_dir}` found but has no .txt/.md files")
+    st.session_state["rag_dir"] = rag_dir
+
     st.number_input("Min sub-agents", 1, 8, int(settings.min_subagents), key="min_subagents")
     st.number_input("Max sub-agents", 1, 8, int(settings.max_subagents), key="max_subagents")
     st.slider("RAG top-k", 1, 20, int(settings.rag_top_k), key="top_k")
@@ -175,7 +222,7 @@ run_clicked = st.button(
 )
 
 if run_clicked:
-    rag_dir = (st.session_state.get("rag_dir") or "").strip() or None
+    rag_dir = st.session_state.get("rag_dir")
     with st.spinner("Running the research agents..."):
         result = _run(query.strip(), rag_dir)
     st.session_state["result"] = result

@@ -14,11 +14,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+from research_agent.config import settings
 from research_agent.graph import build_graph
 
 
 def run(query: str, rag_source_dir: str | None = None) -> str:
-    graph = build_graph(rag_source_dir=rag_source_dir)
+    graph = build_graph(rag_source_dir=rag_source_dir or settings.rag_source_dir or None)
     config = {"configurable": {"thread_id": str(uuid.uuid4())}}
 
     final_state = graph.invoke({"query": query, "research_results": []}, config)

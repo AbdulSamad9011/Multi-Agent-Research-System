@@ -42,9 +42,9 @@
     "semantic_hash": "309916ae909d81bdf5b093dbee302bf9"
   },
   "src/research_agent/config.py": {
-    "mtime": 1787238202.9985707,
-    "seen": 1787238257.7082944,
-    "ast_hash": "fca19778bd9037ce50d5fa0b897204e3",
+    "mtime": 1787244279.1671724,
+    "seen": 1787244352.6009521,
+    "ast_hash": "60f73e9aa35312a0a0966ea5c921c8ad",
     "semantic_hash": ""
   },
   "src/research_agent/graph.py": {
@@ -54,9 +54,9 @@
     "semantic_hash": "5105099109bac3232bb0180d04663da8"
   },
   "src/research_agent/main.py": {
-    "mtime": 1787222320.587113,
-    "seen": 1787235663.3442872,
-    "ast_hash": "0075956336cb404dffbe739a46a33200",
+    "mtime": 1787244282.9456,
+    "seen": 1787244352.6009548,
+    "ast_hash": "08b72d749180b183c72a4ce7fda34957",
     "semantic_hash": ""
   },
   "src/research_agent/rag/__init__.py": {
@@ -180,9 +180,21 @@
     "semantic_hash": ""
   },
   "app.py": {
-    "mtime": 1787242015.3260536,
-    "seen": 1787242246.9884324,
-    "ast_hash": "8fb517a96be86d2a0d46c54159f14342",
+    "mtime": 1787244316.4058092,
+    "seen": 1787244352.600939,
+    "ast_hash": "bb6685bc3fe498e839342c1ff5bf38db",
+    "semantic_hash": ""
+  },
+  "kb/MRI_Brain_Tumor_Detection.md": {
+    "mtime": 1787243305.964683,
+    "seen": 1787244352.6009827,
+    "ast_hash": "b18652b1b2e01152598db927ec361f26",
+    "semantic_hash": ""
+  },
+  "kb/1-s2.0-S2665917424000023-main_260818121504.pdf": {
+    "mtime": 1787243140.0018806,
+    "seen": 1787244352.600984,
+    "ast_hash": "5e441c7881a0134dcd32f213341011db",
     "semantic_hash": ""
   }
 }
