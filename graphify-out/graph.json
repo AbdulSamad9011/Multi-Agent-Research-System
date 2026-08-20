@@ -17,6 +17,19 @@
       "source_location": "L51"
     },
     {
+      "id": "src_research_agent_state_researchplan",
+      "label": "ResearchPlan",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "code",
+      "norm_label": "researchplan",
+      "source_file": "src/research_agent/state.py",
+      "source_location": "L31"
+    },
+    {
       "id": "src_research_agent_state_researchstate",
       "label": "ResearchState",
       "_callable": true,
@@ -30,17 +43,17 @@
       "source_location": "L58"
     },
     {
-      "id": "src_research_agent_state_researchplan",
-      "label": "ResearchPlan",
+      "id": "src_research_agent_state_subtopic",
+      "label": "SubTopic",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 22,
-      "community_name": "state.py",
+      "community": 0,
+      "community_name": "graph.py",
       "file_type": "code",
-      "norm_label": "researchplan",
+      "norm_label": "subtopic",
       "source_file": "src/research_agent/state.py",
-      "source_location": "L31"
+      "source_location": "L16"
     },
     {
       "id": "src_research_agent_state_subagentfindings",
@@ -49,24 +62,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 22,
-      "community_name": "state.py",
+      "community_name": "researcher.py",
       "file_type": "code",
       "norm_label": "subagentfindings",
       "source_file": "src/research_agent/state.py",
       "source_location": "L38"
-    },
-    {
-      "id": "src_research_agent_state_subtopic",
-      "label": "SubTopic",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "state.py",
-      "file_type": "code",
-      "norm_label": "subtopic",
-      "source_file": "src/research_agent/state.py",
-      "source_location": "L16"
     },
     {
       "id": "src_research_agent_config_settings",
@@ -82,16 +82,16 @@
       "source_location": "L21"
     },
     {
-      "id": "src_research_agent_agents_researcher_build_researcher_node",
-      "label": "build_researcher_node()",
+      "id": "src_research_agent_agents_planner_build_planner",
+      "label": "build_planner()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "community_name": "graph.py",
       "file_type": "code",
-      "norm_label": "build_researcher_node()",
-      "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L33"
+      "norm_label": "build_planner()",
+      "source_file": "src/research_agent/agents/planner.py",
+      "source_location": "L29"
     },
     {
       "id": "src_research_agent_agents_summarizer_build_summarizer",
@@ -166,52 +166,184 @@
       "source_location": "L24"
     },
     {
-      "id": "src_research_agent_agents_planner_build_planner",
-      "label": "build_planner()",
+      "id": "src_research_agent_agents_researcher_build_researcher_node",
+      "label": "build_researcher_node()",
       "_callable": true,
       "_origin": "ast",
       "community": 22,
-      "community_name": "state.py",
+      "community_name": "researcher.py",
       "file_type": "code",
-      "norm_label": "build_planner()",
-      "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L30"
+      "norm_label": "build_researcher_node()",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L57"
+    },
+    {
+      "id": "src_research_agent_agents_researcher_extract_findings",
+      "label": "_extract_findings()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "researcher.py",
+      "file_type": "code",
+      "norm_label": "_extract_findings()",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L124"
+    },
+    {
+      "id": "src_research_agent_agents_researcher_fallback_findings",
+      "label": "_fallback_findings()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "researcher.py",
+      "file_type": "code",
+      "norm_label": "_fallback_findings()",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L175"
+    },
+    {
+      "id": "src_research_agent_agents_researcher_looks_complete",
+      "label": "_looks_complete()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "researcher.py",
+      "file_type": "code",
+      "norm_label": "_looks_complete()",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L165"
+    },
+    {
+      "id": "src_research_agent_config_build_chat_model",
+      "label": "build_chat_model()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "researcher.py",
+      "file_type": "code",
+      "norm_label": "build_chat_model()",
+      "source_file": "src/research_agent/config.py",
+      "source_location": "L85"
     },
     {
       "id": "src_research_agent_agents_retry_call_with_model_rotation",
       "label": "call_with_model_rotation()",
       "_callable": true,
       "_origin": "ast",
-      "community": 22,
-      "community_name": "state.py",
+      "community": 24,
+      "community_name": "call_with_model_rotation",
       "file_type": "code",
       "norm_label": "call_with_model_rotation()",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L30"
+      "source_location": "L69"
     },
     {
       "id": "src_research_agent_agents_retry_is_daily_quota",
       "label": "is_daily_quota()",
       "_callable": true,
       "_origin": "ast",
-      "community": 22,
-      "community_name": "state.py",
+      "community": 24,
+      "community_name": "call_with_model_rotation",
       "file_type": "code",
       "norm_label": "is_daily_quota()",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L25"
+      "source_location": "L59"
     },
     {
       "id": "src_research_agent_agents_retry_is_rate_limit",
       "label": "is_rate_limit()",
       "_callable": true,
       "_origin": "ast",
-      "community": 22,
-      "community_name": "state.py",
+      "community": 24,
+      "community_name": "call_with_model_rotation",
       "file_type": "code",
       "norm_label": "is_rate_limit()",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L21"
+      "source_location": "L55"
+    },
+    {
+      "id": "src_research_agent_agents_retry_is_unsupported",
+      "label": "is_unsupported()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "call_with_model_rotation",
+      "file_type": "code",
+      "norm_label": "is_unsupported()",
+      "source_file": "src/research_agent/agents/_retry.py",
+      "source_location": "L64"
+    },
+    {
+      "id": "app_apply_overrides",
+      "label": "_apply_overrides()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "_apply_overrides()",
+      "source_file": "app.py",
+      "source_location": "L33"
+    },
+    {
+      "id": "app_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "app.py",
+      "source_location": "L123"
+    },
+    {
+      "id": "app_render_findings",
+      "label": "_render_findings()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "_render_findings()",
+      "source_file": "app.py",
+      "source_location": "L49"
+    },
+    {
+      "id": "app_render_plan",
+      "label": "_render_plan()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "_render_plan()",
+      "source_file": "app.py",
+      "source_location": "L42"
+    },
+    {
+      "id": "app_render_report",
+      "label": "_render_report()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "_render_report()",
+      "source_file": "app.py",
+      "source_location": "L67"
+    },
+    {
+      "id": "app_run",
+      "label": "_run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "_run()",
+      "source_file": "app.py",
+      "source_location": "L72"
     },
     {
       "id": "src_research_agent_rag_retriever_tool_build_rag_tool",
@@ -250,6 +382,17 @@
       "source_location": "L12"
     },
     {
+      "id": "basemodel",
+      "label": "BaseModel",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "code",
+      "norm_label": "basemodel",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "send",
       "label": "Send",
       "_origin": "ast",
@@ -261,15 +404,15 @@
       "source_location": ""
     },
     {
-      "id": "src_research_agent_agents_researcher_py_basetool",
-      "label": "BaseTool",
+      "id": "src_research_agent_agents_planner",
+      "label": "planner.py",
       "_origin": "ast",
       "community": 0,
       "community_name": "graph.py",
       "file_type": "code",
-      "norm_label": "basetool",
-      "source_file": "",
-      "source_location": ""
+      "norm_label": "planner.py",
+      "source_file": "src/research_agent/agents/planner.py",
+      "source_location": "L1"
     },
     {
       "id": "src_research_agent_agents_summarizer",
@@ -305,6 +448,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_research_agent_state",
+      "label": "state.py",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "code",
+      "norm_label": "state.py",
+      "source_file": "src/research_agent/state.py",
+      "source_location": "L1"
+    },
+    {
       "id": "typeddict",
       "label": "TypedDict",
       "_origin": "ast",
@@ -316,15 +470,15 @@
       "source_location": ""
     },
     {
-      "id": "src_research_agent_agents_researcher_rationale_34",
-      "label": "Factory for the `researcher` graph node. `tools` (e.g. [rag_tool,\u2026",
+      "id": "src_research_agent_agents_planner_rationale_1",
+      "label": "Planner node: turns the user query into a ResearchPlan (3-4 subtopics).\u2026",
       "_origin": "ast",
       "community": 0,
       "community_name": "graph.py",
       "file_type": "rationale",
-      "norm_label": "factory for the `researcher` graph node. `tools` (e.g. [rag_tool,...",
-      "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L34"
+      "norm_label": "planner node: turns the user query into a researchplan (3-4 subtopics)....",
+      "source_file": "src/research_agent/agents/planner.py",
+      "source_location": "L1"
     },
     {
       "id": "src_research_agent_agents_summarizer_rationale_1",
@@ -380,6 +534,39 @@
       "norm_label": "cli entrypoint: run a single research request end-to-end. python -m...",
       "source_file": "src/research_agent/main.py",
       "source_location": "L1"
+    },
+    {
+      "id": "src_research_agent_state_rationale_1",
+      "label": "Shared graph state schema. `ResearchState` is the top-level state threaded\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "rationale",
+      "norm_label": "shared graph state schema. `researchstate` is the top-level state threaded...",
+      "source_file": "src/research_agent/state.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_research_agent_state_rationale_17",
+      "label": "One slice of the research plan, assigned to one sub-agent.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "rationale",
+      "norm_label": "one slice of the research plan, assigned to one sub-agent.",
+      "source_file": "src/research_agent/state.py",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_research_agent_state_rationale_32",
+      "label": "Structured output of the planner node.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "graph.py",
+      "file_type": "rationale",
+      "norm_label": "structured output of the planner node.",
+      "source_file": "src/research_agent/state.py",
+      "source_location": "L32"
     },
     {
       "id": "src_research_agent_state_rationale_52",
@@ -1114,165 +1301,88 @@
       "source_location": "L1"
     },
     {
-      "id": "basemodel",
-      "label": "BaseModel",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "state.py",
-      "file_type": "code",
-      "norm_label": "basemodel",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "exception",
-      "label": "Exception",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "state.py",
-      "file_type": "code",
-      "norm_label": "exception",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_research_agent_agents_planner",
-      "label": "planner.py",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "state.py",
-      "file_type": "code",
-      "norm_label": "planner.py",
-      "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L1"
-    },
-    {
       "id": "src_research_agent_agents_researcher",
       "label": "researcher.py",
       "_origin": "ast",
       "community": 22,
-      "community_name": "state.py",
+      "community_name": "researcher.py",
       "file_type": "code",
       "norm_label": "researcher.py",
       "source_file": "src/research_agent/agents/researcher.py",
       "source_location": "L1"
     },
     {
-      "id": "src_research_agent_agents_retry",
-      "label": "_retry.py",
+      "id": "src_research_agent_agents_researcher_py_basetool",
+      "label": "BaseTool",
       "_origin": "ast",
       "community": 22,
-      "community_name": "state.py",
+      "community_name": "researcher.py",
       "file_type": "code",
-      "norm_label": "_retry.py",
-      "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_research_agent_state",
-      "label": "state.py",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "state.py",
-      "file_type": "code",
-      "norm_label": "state.py",
-      "source_file": "src/research_agent/state.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "t",
-      "label": "T",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "state.py",
-      "file_type": "code",
-      "norm_label": "t",
+      "norm_label": "basetool",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_research_agent_agents_planner_rationale_1",
-      "label": "Planner node: turns the user query into a ResearchPlan (3-4 subtopics).\u2026",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "state.py",
-      "file_type": "rationale",
-      "norm_label": "planner node: turns the user query into a researchplan (3-4 subtopics)....",
-      "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L1"
-    },
-    {
       "id": "src_research_agent_agents_researcher_rationale_1",
-      "label": "Sub-agent factory: a create_agent-based researcher with RAG + web tools. Each\u2026",
+      "label": "Researcher node: manual tool-calling loop + structured extraction pass. Why not\u2026",
       "_origin": "ast",
       "community": 22,
-      "community_name": "state.py",
+      "community_name": "researcher.py",
       "file_type": "rationale",
-      "norm_label": "sub-agent factory: a create_agent-based researcher with rag + web tools. each...",
+      "norm_label": "researcher node: manual tool-calling loop + structured extraction pass. why not...",
       "source_file": "src/research_agent/agents/researcher.py",
       "source_location": "L1"
     },
     {
-      "id": "src_research_agent_agents_retry_rationale_1",
-      "label": "Shared quota-aware retry for LLM calls. Google free tier has two distinct 429\u2026",
+      "id": "src_research_agent_agents_researcher_rationale_125",
+      "label": "Normalize the researcher's text into SubAgentFindings. The researcher's text-\u2026",
       "_origin": "ast",
       "community": 22,
-      "community_name": "state.py",
+      "community_name": "researcher.py",
       "file_type": "rationale",
-      "norm_label": "shared quota-aware retry for llm calls. google free tier has two distinct 429...",
-      "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L1"
+      "norm_label": "normalize the researcher's text into subagentfindings. the researcher's text-...",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L125"
     },
     {
-      "id": "src_research_agent_agents_retry_rationale_39",
-      "label": "Try `invoke(build(m))` for each model in rotation until one succeeds. Per-\u2026",
+      "id": "src_research_agent_agents_researcher_rationale_166",
+      "label": "Reject extraction outputs that echo junk instead of real findings.",
       "_origin": "ast",
       "community": 22,
-      "community_name": "state.py",
+      "community_name": "researcher.py",
       "file_type": "rationale",
-      "norm_label": "try `invoke(build(m))` for each model in rotation until one succeeds. per-...",
-      "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L39"
+      "norm_label": "reject extraction outputs that echo junk instead of real findings.",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L166"
     },
     {
-      "id": "src_research_agent_state_rationale_1",
-      "label": "Shared graph state schema. `ResearchState` is the top-level state threaded\u2026",
+      "id": "src_research_agent_agents_researcher_rationale_58",
+      "label": "Factory for the `researcher` graph node (see module docstring).",
       "_origin": "ast",
       "community": 22,
-      "community_name": "state.py",
+      "community_name": "researcher.py",
       "file_type": "rationale",
-      "norm_label": "shared graph state schema. `researchstate` is the top-level state threaded...",
-      "source_file": "src/research_agent/state.py",
-      "source_location": "L1"
+      "norm_label": "factory for the `researcher` graph node (see module docstring).",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L58"
     },
     {
-      "id": "src_research_agent_state_rationale_17",
-      "label": "One slice of the research plan, assigned to one sub-agent.",
+      "id": "src_research_agent_config_rationale_86",
+      "label": "Instantiate a chat model from a \"provider:model\" string. `init_chat_model` has\u2026",
       "_origin": "ast",
       "community": 22,
-      "community_name": "state.py",
+      "community_name": "researcher.py",
       "file_type": "rationale",
-      "norm_label": "one slice of the research plan, assigned to one sub-agent.",
-      "source_file": "src/research_agent/state.py",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_research_agent_state_rationale_32",
-      "label": "Structured output of the planner node.",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "state.py",
-      "file_type": "rationale",
-      "norm_label": "structured output of the planner node.",
-      "source_file": "src/research_agent/state.py",
-      "source_location": "L32"
+      "norm_label": "instantiate a chat model from a \"provider:model\" string. `init_chat_model` has...",
+      "source_file": "src/research_agent/config.py",
+      "source_location": "L86"
     },
     {
       "id": "src_research_agent_state_rationale_39",
       "label": "Structured output each sub-agent (researcher) must return.",
       "_origin": "ast",
       "community": 22,
-      "community_name": "state.py",
+      "community_name": "researcher.py",
       "file_type": "rationale",
       "norm_label": "structured output each sub-agent (researcher) must return.",
       "source_file": "src/research_agent/state.py",
@@ -1293,6 +1403,105 @@
       "norm_label": "graph.md",
       "source_file": ".opencode/command/graph.md",
       "source_location": "L1"
+    },
+    {
+      "id": "exception",
+      "label": "Exception",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "call_with_model_rotation",
+      "file_type": "code",
+      "norm_label": "exception",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_research_agent_agents_retry",
+      "label": "_retry.py",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "call_with_model_rotation",
+      "file_type": "code",
+      "norm_label": "_retry.py",
+      "source_file": "src/research_agent/agents/_retry.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "t",
+      "label": "T",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "call_with_model_rotation",
+      "file_type": "code",
+      "norm_label": "t",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_research_agent_agents_retry_rationale_1",
+      "label": "Shared quota-aware retry for LLM calls. Google free tier has two distinct 429\u2026",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "call_with_model_rotation",
+      "file_type": "rationale",
+      "norm_label": "shared quota-aware retry for llm calls. google free tier has two distinct 429...",
+      "source_file": "src/research_agent/agents/_retry.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_research_agent_agents_retry_rationale_78",
+      "label": "Try `invoke(build(m))` for each model in rotation until one succeeds. Per-\u2026",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "call_with_model_rotation",
+      "file_type": "rationale",
+      "norm_label": "try `invoke(build(m))` for each model in rotation until one succeeds. per-...",
+      "source_file": "src/research_agent/agents/_retry.py",
+      "source_location": "L78"
+    },
+    {
+      "id": "app",
+      "label": "app.py",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "app.py",
+      "file_type": "code",
+      "norm_label": "app.py",
+      "source_file": "app.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_rationale_1",
+      "label": "Streamlit frontend for the multi-agent research system. Run with: streamlit run\u2026",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "app.py",
+      "file_type": "rationale",
+      "norm_label": "streamlit frontend for the multi-agent research system. run with: streamlit run...",
+      "source_file": "app.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_rationale_34",
+      "label": "Push sidebar runtime knobs into the frozen Settings for this run.",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "app.py",
+      "file_type": "rationale",
+      "norm_label": "push sidebar runtime knobs into the frozen settings for this run.",
+      "source_file": "app.py",
+      "source_location": "L34"
+    },
+    {
+      "id": "app_rationale_73",
+      "label": "Execute the graph, streaming node-level progress into the UI.",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "app.py",
+      "file_type": "rationale",
+      "norm_label": "execute the graph, streaming node-level progress into the ui.",
+      "source_file": "app.py",
+      "source_location": "L73"
     },
     {
       "id": "src_research_agent_config",
@@ -1719,6 +1928,90 @@
   ],
   "links": [
     {
+      "source": "app_main",
+      "target": "app_run",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app.py",
+      "source_location": "L142",
+      "weight": 1.0
+    },
+    {
+      "source": "app_run",
+      "target": "app_render_plan",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app.py",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
+      "source": "app_run",
+      "target": "app_render_findings",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app.py",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "app_run",
+      "target": "app_render_report",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app.py",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "app_run",
+      "target": "app_apply_overrides",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app.py",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "app_run",
+      "target": "src_research_agent_graph_build_graph",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app.py",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_planner_build_planner",
+      "target": "src_research_agent_config_build_chat_model",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/research_agent/agents/planner.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
       "source": "src_research_agent_agents_planner_build_planner",
       "target": "src_research_agent_agents_retry_call_with_model_rotation",
       "relation": "calls",
@@ -1732,6 +2025,18 @@
     },
     {
       "source": "src_research_agent_agents_researcher_build_researcher_node",
+      "target": "src_research_agent_config_build_chat_model",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher_build_researcher_node",
       "target": "src_research_agent_agents_retry_call_with_model_rotation",
       "relation": "calls",
       "_origin": "ast",
@@ -1739,19 +2044,67 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L70",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
-      "source": "src_research_agent_agents_retry_call_with_model_rotation",
-      "target": "src_research_agent_agents_retry_is_rate_limit",
+      "source": "src_research_agent_agents_researcher_extract_findings",
+      "target": "src_research_agent_config_build_chat_model",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
-      "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L54",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher_extract_findings",
+      "target": "src_research_agent_agents_retry_call_with_model_rotation",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L151",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher_extract_findings",
+      "target": "src_research_agent_agents_researcher_looks_complete",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L154",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher_extract_findings",
+      "target": "src_research_agent_agents_researcher_fallback_findings",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher_fallback_findings",
+      "target": "src_research_agent_state_subagentfindings",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L176",
       "weight": 1.0
     },
     {
@@ -1763,7 +2116,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L57",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_retry_call_with_model_rotation",
+      "target": "src_research_agent_agents_retry_is_rate_limit",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/research_agent/agents/_retry.py",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_retry_call_with_model_rotation",
+      "target": "src_research_agent_agents_retry_is_unsupported",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/research_agent/agents/_retry.py",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -1775,7 +2152,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L27",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -1955,7 +2332,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L33",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -1991,6 +2368,18 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/planner.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_planner",
+      "target": "src_research_agent_config_build_chat_model",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/research_agent/agents/planner.py",
       "source_location": "L11",
       "weight": 1.0
     },
@@ -2003,7 +2392,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L13",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -2015,7 +2404,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L13",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -2027,7 +2416,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L17",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher",
+      "target": "src_research_agent_config_build_chat_model",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -2039,7 +2440,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L19",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -2051,7 +2452,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L19",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -2175,8 +2576,56 @@
       "weight": 1.0
     },
     {
+      "source": "app",
+      "target": "src_research_agent_config",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_research_agent_graph",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_research_agent_state",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
       "source": "src_research_agent_agents_planner",
       "target": "src_research_agent_agents_retry",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/research_agent/agents/planner.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_planner",
+      "target": "src_research_agent_config",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -2188,18 +2637,6 @@
     },
     {
       "source": "src_research_agent_agents_planner",
-      "target": "src_research_agent_config",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L12",
-      "weight": 1.0
-    },
-    {
-      "source": "src_research_agent_agents_planner",
       "target": "src_research_agent_state",
       "relation": "imports_from",
       "_origin": "ast",
@@ -2207,7 +2644,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L13",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -2219,7 +2656,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L17",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -2231,7 +2668,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L18",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -2243,7 +2680,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L19",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -2411,7 +2848,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L25",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -2423,7 +2860,19 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L21",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_retry_is_unsupported",
+      "target": "exception",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/research_agent/agents/_retry.py",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -2447,7 +2896,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L30",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -2471,6 +2920,72 @@
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_main",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_apply_overrides",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_render_plan",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_render_findings",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.py",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_render_report",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.py",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_run",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.py",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
@@ -3141,7 +3656,40 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L30",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher",
+      "target": "src_research_agent_agents_researcher_extract_findings",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher",
+      "target": "src_research_agent_agents_researcher_looks_complete",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L165",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher",
+      "target": "src_research_agent_agents_researcher_fallback_findings",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L175",
       "weight": 1.0
     },
     {
@@ -3152,7 +3700,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L33",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -3163,7 +3711,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L21",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -3174,7 +3722,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L25",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_retry",
+      "target": "src_research_agent_agents_retry_is_unsupported",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/research_agent/agents/_retry.py",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -3185,7 +3744,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L30",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -3208,6 +3767,17 @@
       "confidence_score": 1.0,
       "source_file": "src/research_agent/config.py",
       "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_config",
+      "target": "src_research_agent_config_build_chat_model",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/research_agent/config.py",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -3398,6 +3968,39 @@
       "weight": 1.0
     },
     {
+      "source": "app_rationale_1",
+      "target": "app",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_rationale_34",
+      "target": "app_apply_overrides",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "app_rationale_73",
+      "target": "app_run",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
       "source": "opencode_plugins_graphify_rationale_4",
       "target": "opencode_plugins_graphify",
       "relation": "rationale_for",
@@ -3431,14 +4034,36 @@
       "weight": 1.0
     },
     {
-      "source": "src_research_agent_agents_researcher_rationale_34",
+      "source": "src_research_agent_agents_researcher_rationale_125",
+      "target": "src_research_agent_agents_researcher_extract_findings",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher_rationale_166",
+      "target": "src_research_agent_agents_researcher_looks_complete",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L166",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher_rationale_58",
       "target": "src_research_agent_agents_researcher_build_researcher_node",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L34",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -3453,14 +4078,14 @@
       "weight": 1.0
     },
     {
-      "source": "src_research_agent_agents_retry_rationale_39",
+      "source": "src_research_agent_agents_retry_rationale_78",
       "target": "src_research_agent_agents_retry_call_with_model_rotation",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L39",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -3483,6 +4108,17 @@
       "confidence_score": 1.0,
       "source_file": "src/research_agent/config.py",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_config_rationale_86",
+      "target": "src_research_agent_config_build_chat_model",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/research_agent/config.py",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -3663,6 +4299,42 @@
       "weight": 1.0
     },
     {
+      "source": "app_render_findings",
+      "target": "src_research_agent_state_subagentfindings",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "generic_arg",
+      "source_file": "app.py",
+      "source_location": "L49",
+      "weight": 0.8
+    },
+    {
+      "source": "app_render_plan",
+      "target": "src_research_agent_state_researchplan",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "parameter_type",
+      "source_file": "app.py",
+      "source_location": "L42",
+      "weight": 0.8
+    },
+    {
+      "source": "src_research_agent_agents_researcher_looks_complete",
+      "target": "src_research_agent_state_subagentfindings",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "parameter_type",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L165",
+      "weight": 0.8
+    },
+    {
       "source": "src_research_agent_graph_route_to_researchers",
       "target": "src_research_agent_state_researchstate",
       "relation": "uses",
@@ -3675,6 +4347,40 @@
       "weight": 0.8
     },
     {
+      "source": "src_research_agent_agents_researcher_extract_findings",
+      "target": "src_research_agent_state_subagentfindings",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "return_type",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L124",
+      "weight": 0.8
+    },
+    {
+      "source": "app_run",
+      "target": "src_research_agent_state_researchplan",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "app.py",
+      "source_location": "L86",
+      "weight": 0.8
+    },
+    {
+      "source": "app_run",
+      "target": "src_research_agent_state_subagentfindings",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "app.py",
+      "source_location": "L87",
+      "weight": 0.8
+    },
+    {
       "source": "src_research_agent_agents_planner_build_planner",
       "target": "src_research_agent_state_researchplan",
       "relation": "uses",
@@ -3682,7 +4388,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L37",
+      "source_location": "L36",
       "weight": 0.8
     },
     {
@@ -3704,18 +4410,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L42",
-      "weight": 0.8
-    },
-    {
-      "source": "src_research_agent_agents_researcher_build_researcher_node",
-      "target": "src_research_agent_state_subagentfindings",
-      "relation": "uses",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L52",
+      "source_location": "L62",
       "weight": 0.8
     },
     {
@@ -3742,5 +4437,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e29bbb2a2d189a02de815758cfa4f781edf18884"
+  "built_at_commit": "5afa60df79900cec8239b58e1e21dfbe70386759"
 }

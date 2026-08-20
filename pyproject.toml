@@ -14,8 +14,10 @@ dependencies = [
     "langchain-text-splitters>=0.3",
     "langchain-groq>=1.0",
     "langchain-google-genai>=2.0",
+    "langchain-huggingface>=0.3",
     "python-dotenv>=1.0",
     "pydantic>=2.7",
+    "streamlit>=1.32",
 ]
 
 [build-system]

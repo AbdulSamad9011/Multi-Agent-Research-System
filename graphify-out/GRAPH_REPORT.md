@@ -1,16 +1,16 @@
 # Graph Report - research_agent  (2026-08-20)
 
 ## Corpus Check
-- 30 files · ~14,044 words
+- 31 files · ~15,398 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 146 nodes · 178 edges · 24 communities (18 shown, 6 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.94)
+- 164 nodes · 220 edges · 26 communities (20 shown, 6 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 13 edges (avg confidence: 0.94)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e29bbb2a`
+- Built from commit: `5afa60df`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -33,40 +33,42 @@
 - graphify reference: transcribe video and audio
 - AGENTS.md
 - extraction-spec.md
-- state.py
+- researcher.py
+- call_with_model_rotation
+- app.py
 
 ## God Nodes (most connected - your core abstractions)
-1. `build_graph()` - 12 edges
+1. `build_graph()` - 13 edges
 2. `What You Must Do When Invoked` - 12 edges
-3. `ResearchState` - 10 edges
-4. `/graphify` - 10 edges
-5. `call_with_model_rotation()` - 9 edges
-6. `build_researcher_node()` - 8 edges
-7. `graphify reference: extra exports and benchmark` - 8 edges
-8. `build_vectorstore()` - 7 edges
-9. `ResearcherTask` - 7 edges
-10. `build_planner()` - 6 edges
+3. `call_with_model_rotation()` - 11 edges
+4. `_run()` - 10 edges
+5. `ResearchState` - 10 edges
+6. `/graphify` - 10 edges
+7. `SubAgentFindings` - 9 edges
+8. `build_researcher_node()` - 8 edges
+9. `graphify reference: extra exports and benchmark` - 8 edges
+10. `build_planner()` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `build_planner()` --uses--> `ResearchState`  [INFERRED]
-  src/research_agent/agents/planner.py → src/research_agent/state.py
-- `build_researcher_node()` --uses--> `SubAgentFindings`  [INFERRED]
-  src/research_agent/agents/researcher.py → src/research_agent/state.py
-- `build_researcher_node()` --calls--> `call_with_model_rotation()`  [EXTRACTED]
-  src/research_agent/agents/researcher.py → src/research_agent/agents/_retry.py
-- `build_planner()` --uses--> `ResearchPlan`  [INFERRED]
-  src/research_agent/agents/planner.py → src/research_agent/state.py
-- `build_graph()` --calls--> `build_planner()`  [EXTRACTED]
-  src/research_agent/graph.py → src/research_agent/agents/planner.py
+- `_render_plan()` --uses--> `ResearchPlan`  [INFERRED]
+  app.py → src/research_agent/state.py
+- `_render_findings()` --uses--> `SubAgentFindings`  [INFERRED]
+  app.py → src/research_agent/state.py
+- `_run()` --uses--> `ResearchPlan`  [INFERRED]
+  app.py → src/research_agent/state.py
+- `_run()` --uses--> `SubAgentFindings`  [INFERRED]
+  app.py → src/research_agent/state.py
+- `_run()` --calls--> `build_graph()`  [EXTRACTED]
+  app.py → src/research_agent/graph.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (24 total, 6 thin omitted)
+## Communities (26 total, 6 thin omitted)
 
 ### Community 0 - "graph.py"
-Cohesion: 0.16
-Nodes (18): Send, build_researcher_node(), BaseTool, Factory for the `researcher` graph node. `tools` (e.g. [rag_tool,…, build_summarizer(), Summarizer node: synthesizes all sub-agent findings into one report., build_graph(), Wires planner -> parallel researchers -> summarizer into a LangGraph graph. (+10 more)
+Cohesion: 0.13
+Nodes (23): BaseModel, Send, build_planner(), Planner node: turns the user query into a ResearchPlan (3-4 subtopics).…, build_summarizer(), Summarizer node: synthesizes all sub-agent findings into one report., build_graph(), Wires planner -> parallel researchers -> summarizer into a LangGraph graph. (+15 more)
 
 ### Community 1 - "What You Must Do When Invoked"
 Cohesion: 0.13
@@ -112,9 +114,17 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
-### Community 22 - "state.py"
-Cohesion: 0.15
-Nodes (18): BaseModel, Exception, build_planner(), Planner node: turns the user query into a ResearchPlan (3-4 subtopics).…, Sub-agent factory: a create_agent-based researcher with RAG + web tools. Each…, call_with_model_rotation(), is_daily_quota(), is_rate_limit() (+10 more)
+### Community 22 - "researcher.py"
+Cohesion: 0.22
+Nodes (13): build_researcher_node(), _extract_findings(), _fallback_findings(), _looks_complete(), BaseTool, Researcher node: manual tool-calling loop + structured extraction pass. Why not…, Normalize the researcher's text into SubAgentFindings. The researcher's text-…, Reject extraction outputs that echo junk instead of real findings. (+5 more)
+
+### Community 24 - "call_with_model_rotation"
+Cohesion: 0.39
+Nodes (8): Exception, call_with_model_rotation(), is_daily_quota(), is_rate_limit(), is_unsupported(), Shared quota-aware retry for LLM calls. Google free tier has two distinct 429…, Try `invoke(build(m))` for each model in rotation until one succeeds. Per-…, T
+
+### Community 25 - "app.py"
+Cohesion: 0.31
+Nodes (9): _apply_overrides(), main(), Streamlit frontend for the multi-agent research system. Run with: streamlit run…, Push sidebar runtime knobs into the frozen Settings for this run., Execute the graph, streaming node-level progress into the UI., _render_findings(), _render_plan(), _render_report() (+1 more)
 
 ## Knowledge Gaps
 - **51 isolated node(s):** `$schema`, `.opencode/plugins/graphify.js`, `research-agent`, `Settings`, `Usage` (+46 more)
@@ -124,17 +134,17 @@ Nodes (18): BaseModel, Exception, build_planner(), Planner node: turns the user 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `build_graph()` connect `graph.py` to `build_vectorstore`, `config.py`, `state.py`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+- **Why does `build_graph()` connect `graph.py` to `app.py`, `build_vectorstore`, `config.py`, `researcher.py`?**
+  _High betweenness centrality (0.034) - this node is a cross-community bridge._
+- **Why does `call_with_model_rotation()` connect `call_with_model_rotation` to `graph.py`, `researcher.py`?**
+  _High betweenness centrality (0.029) - this node is a cross-community bridge._
 - **Why does `build_vectorstore()` connect `build_vectorstore` to `graph.py`?**
-  _High betweenness centrality (0.025) - this node is a cross-community bridge._
-- **Why does `call_with_model_rotation()` connect `state.py` to `graph.py`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+  _High betweenness centrality (0.026) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `build_graph()` (e.g. with `route_to_researchers()` and `ResearchState`) actually correct?**
   _`build_graph()` has 2 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 2 inferred relationships involving `_run()` (e.g. with `ResearchPlan` and `SubAgentFindings`) actually correct?**
+  _`_run()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 4 inferred relationships involving `ResearchState` (e.g. with `build_planner()` and `build_summarizer()`) actually correct?**
   _`ResearchState` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `$schema`, `.opencode/plugins/graphify.js`, `research-agent` to the rest of the system?**
   _51 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `What You Must Do When Invoked` be split into smaller, more focused modules?**
-  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._

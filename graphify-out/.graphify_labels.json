@@ -21,6 +21,8 @@
   "19": "graphify reference: transcribe video and audio",
   "20": "AGENTS.md",
   "21": "extraction-spec.md",
-  "22": "state.py",
-  "23": "graph.md"
+  "22": "researcher.py",
+  "23": "graph.md",
+  "24": "call_with_model_rotation",
+  "25": "app.py"
 }
