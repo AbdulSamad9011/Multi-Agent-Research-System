@@ -27,10 +27,8 @@ another subtopic's findings to be researched.""".format(
 
 
 def build_planner():
-    # method="json_schema" is the most portable structured-output mode across
-    # providers. The default function-calling method is unsupported/unreliable
-    # on several Groq models ("Tool choice is required, but model did not call
-    # a tool" / tool_use_failed / json_validate_failed).
+    # method="json_schema" is the portable structured-output mode; the default
+    # function-calling method is unreliable on several Groq models.
     def make_structured(model_str: str):
         return build_chat_model(model_str).with_structured_output(
             ResearchPlan, method="json_schema"

@@ -1,17 +1,10 @@
-"""Researcher node: manual tool-calling loop + structured extraction pass.
+"""Researcher: manual tool-calling loop + structured extraction pass.
 
-Why not create_agent(response_format=...)? create_agent forces
-`tool_choice="any"` when structured output is requested (langchain agents
-factory.py:1419), which several providers can't serve — and Groq's
-tools+structured-output combination is outright unsupported. So we drive the
-loop ourselves with plain `bind_tools(tools)` (no forced choice) and normalize
-the agent's final text into SubAgentFindings with a separate structured
-extraction call (Groq json_schema — cheap and reliable). This lets every
-provider in the rotation do the research: Google, Groq (gpt-oss), etc.
-
-The tool loop itself rotates across `settings.researcher_models` on every
-step, so a mid-loop Google 429 rolls the remaining steps onto another
-provider; `start_index` staggers parallel branches.
+create_agent(response_format=...) forces tool_choice="any" (langchain agents
+factory.py:1419), which Groq doesn't support. So we bind tools plainly, loop
+until the model answers, and normalize the final text into SubAgentFindings
+with a separate extraction call (Groq json_schema). Rotation happens on every
+step; `start_index` staggers parallel branches.
 """
 from __future__ import annotations
 
@@ -165,12 +158,8 @@ def _content_to_text(content) -> str:
 
 
 def _extract_findings(subtopic, final_text: str) -> SubAgentFindings:
-    """Normalize the researcher's text into SubAgentFindings.
-
-    The researcher's text-to-schema conversion can't fail the whole run: if
-    every extraction model is exhausted/unsupported we fall back to wrapping
-    the raw text so the summarizer still has something to work with.
-    """
+    """Normalize the researcher's text into SubAgentFindings. Never raises;
+    on exhaustion/unsupported models it wraps the raw text instead."""
     try:
 
         def make_structured(model_str: str):

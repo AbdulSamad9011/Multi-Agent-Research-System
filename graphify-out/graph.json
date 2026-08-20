@@ -139,7 +139,7 @@
       "file_type": "code",
       "norm_label": "_count_ingestible()",
       "source_file": "app.py",
-      "source_location": "L49"
+      "source_location": "L44"
     },
     {
       "id": "src_research_agent_rag_ingest_build_vectorstore",
@@ -175,7 +175,7 @@
       "file_type": "code",
       "norm_label": "build_researcher_node()",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L57"
+      "source_location": "L50"
     },
     {
       "id": "src_research_agent_agents_researcher_content_to_text",
@@ -187,7 +187,7 @@
       "file_type": "code",
       "norm_label": "_content_to_text()",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L145"
+      "source_location": "L138"
     },
     {
       "id": "src_research_agent_agents_researcher_extract_findings",
@@ -199,7 +199,7 @@
       "file_type": "code",
       "norm_label": "_extract_findings()",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L167"
+      "source_location": "L160"
     },
     {
       "id": "src_research_agent_agents_researcher_fallback_findings",
@@ -211,7 +211,7 @@
       "file_type": "code",
       "norm_label": "_fallback_findings()",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L218"
+      "source_location": "L207"
     },
     {
       "id": "src_research_agent_agents_researcher_looks_complete",
@@ -223,7 +223,7 @@
       "file_type": "code",
       "norm_label": "_looks_complete()",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L208"
+      "source_location": "L197"
     },
     {
       "id": "src_research_agent_agents_retry_call_with_model_rotation",
@@ -235,7 +235,7 @@
       "file_type": "code",
       "norm_label": "call_with_model_rotation()",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L69"
+      "source_location": "L67"
     },
     {
       "id": "src_research_agent_agents_retry_is_daily_quota",
@@ -247,7 +247,7 @@
       "file_type": "code",
       "norm_label": "is_daily_quota()",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L59"
+      "source_location": "L57"
     },
     {
       "id": "src_research_agent_agents_retry_is_rate_limit",
@@ -259,7 +259,7 @@
       "file_type": "code",
       "norm_label": "is_rate_limit()",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L55"
+      "source_location": "L53"
     },
     {
       "id": "src_research_agent_agents_retry_is_unsupported",
@@ -271,7 +271,7 @@
       "file_type": "code",
       "norm_label": "is_unsupported()",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L64"
+      "source_location": "L62"
     },
     {
       "id": "app_apply_overrides",
@@ -283,7 +283,7 @@
       "file_type": "code",
       "norm_label": "_apply_overrides()",
       "source_file": "app.py",
-      "source_location": "L58"
+      "source_location": "L53"
     },
     {
       "id": "app_empty_result",
@@ -295,7 +295,7 @@
       "file_type": "code",
       "norm_label": "_empty_result()",
       "source_file": "app.py",
-      "source_location": "L66"
+      "source_location": "L61"
     },
     {
       "id": "app_kb_dir_candidates",
@@ -307,7 +307,7 @@
       "file_type": "code",
       "norm_label": "_kb_dir_candidates()",
       "source_file": "app.py",
-      "source_location": "L38"
+      "source_location": "L33"
     },
     {
       "id": "app_render_findings",
@@ -319,7 +319,7 @@
       "file_type": "code",
       "norm_label": "_render_findings()",
       "source_file": "app.py",
-      "source_location": "L85"
+      "source_location": "L80"
     },
     {
       "id": "app_render_plan",
@@ -331,7 +331,7 @@
       "file_type": "code",
       "norm_label": "_render_plan()",
       "source_file": "app.py",
-      "source_location": "L78"
+      "source_location": "L73"
     },
     {
       "id": "app_render_report",
@@ -343,7 +343,7 @@
       "file_type": "code",
       "norm_label": "_render_report()",
       "source_file": "app.py",
-      "source_location": "L104"
+      "source_location": "L99"
     },
     {
       "id": "app_render_result",
@@ -355,7 +355,7 @@
       "file_type": "code",
       "norm_label": "_render_result()",
       "source_file": "app.py",
-      "source_location": "L150"
+      "source_location": "L145"
     },
     {
       "id": "app_run",
@@ -367,7 +367,7 @@
       "file_type": "code",
       "norm_label": "_run()",
       "source_file": "app.py",
-      "source_location": "L109"
+      "source_location": "L104"
     },
     {
       "id": "src_research_agent_agents_planner_build_planner",
@@ -403,7 +403,7 @@
       "file_type": "code",
       "norm_label": "build_chat_model()",
       "source_file": "src/research_agent/config.py",
-      "source_location": "L88"
+      "source_location": "L75"
     },
     {
       "id": "src_research_agent_graph_route_to_researchers",
@@ -1328,17 +1328,17 @@
     },
     {
       "id": "src_research_agent_agents_researcher_rationale_1",
-      "label": "Researcher node: manual tool-calling loop + structured extraction pass. Why not\u2026",
+      "label": "Researcher: manual tool-calling loop + structured extraction pass.\u2026",
       "_origin": "ast",
       "community": 22,
       "community_name": "researcher.py",
       "file_type": "rationale",
-      "norm_label": "researcher node: manual tool-calling loop + structured extraction pass. why not...",
+      "norm_label": "researcher: manual tool-calling loop + structured extraction pass....",
       "source_file": "src/research_agent/agents/researcher.py",
       "source_location": "L1"
     },
     {
-      "id": "src_research_agent_agents_researcher_rationale_146",
+      "id": "src_research_agent_agents_researcher_rationale_139",
       "label": "Normalize a message's `content` (str, list of blocks, or None) to text.",
       "_origin": "ast",
       "community": 22,
@@ -1346,21 +1346,21 @@
       "file_type": "rationale",
       "norm_label": "normalize a message's `content` (str, list of blocks, or none) to text.",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L146"
+      "source_location": "L139"
     },
     {
-      "id": "src_research_agent_agents_researcher_rationale_168",
-      "label": "Normalize the researcher's text into SubAgentFindings. The researcher's text-\u2026",
+      "id": "src_research_agent_agents_researcher_rationale_161",
+      "label": "Normalize the researcher's text into SubAgentFindings. Never raises; on\u2026",
       "_origin": "ast",
       "community": 22,
       "community_name": "researcher.py",
       "file_type": "rationale",
-      "norm_label": "normalize the researcher's text into subagentfindings. the researcher's text-...",
+      "norm_label": "normalize the researcher's text into subagentfindings. never raises; on...",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L168"
+      "source_location": "L161"
     },
     {
-      "id": "src_research_agent_agents_researcher_rationale_209",
+      "id": "src_research_agent_agents_researcher_rationale_198",
       "label": "Reject extraction outputs that echo junk instead of real findings.",
       "_origin": "ast",
       "community": 22,
@@ -1368,10 +1368,10 @@
       "file_type": "rationale",
       "norm_label": "reject extraction outputs that echo junk instead of real findings.",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L209"
+      "source_location": "L198"
     },
     {
-      "id": "src_research_agent_agents_researcher_rationale_58",
+      "id": "src_research_agent_agents_researcher_rationale_51",
       "label": "Factory for the `researcher` graph node (see module docstring).",
       "_origin": "ast",
       "community": 22,
@@ -1379,7 +1379,7 @@
       "file_type": "rationale",
       "norm_label": "factory for the `researcher` graph node (see module docstring).",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L58"
+      "source_location": "L51"
     },
     {
       "id": "src_research_agent_agents_retry_rationale_1",
@@ -1393,7 +1393,7 @@
       "source_location": "L1"
     },
     {
-      "id": "src_research_agent_agents_retry_rationale_78",
+      "id": "src_research_agent_agents_retry_rationale_76",
       "label": "Try `invoke(build(m))` for each model in rotation until one succeeds. Per-\u2026",
       "_origin": "ast",
       "community": 22,
@@ -1401,7 +1401,7 @@
       "file_type": "rationale",
       "norm_label": "try `invoke(build(m))` for each model in rotation until one succeeds. per-...",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L78"
+      "source_location": "L76"
     },
     {
       "id": "src_research_agent_state_rationale_39",
@@ -1453,7 +1453,7 @@
       "source_location": "L1"
     },
     {
-      "id": "app_rationale_110",
+      "id": "app_rationale_105",
       "label": "Execute the graph, streaming node-level progress. Never raises.",
       "_origin": "ast",
       "community": 25,
@@ -1461,10 +1461,10 @@
       "file_type": "rationale",
       "norm_label": "execute the graph, streaming node-level progress. never raises.",
       "source_file": "app.py",
-      "source_location": "L110"
+      "source_location": "L105"
     },
     {
-      "id": "app_rationale_39",
+      "id": "app_rationale_34",
       "label": "Top-level folders (one level deep) that contain ingestible files.",
       "_origin": "ast",
       "community": 25,
@@ -1472,10 +1472,10 @@
       "file_type": "rationale",
       "norm_label": "top-level folders (one level deep) that contain ingestible files.",
       "source_file": "app.py",
-      "source_location": "L39"
+      "source_location": "L34"
     },
     {
-      "id": "app_rationale_59",
+      "id": "app_rationale_54",
       "label": "Push sidebar runtime knobs into the frozen Settings for this run.",
       "_origin": "ast",
       "community": 25,
@@ -1483,7 +1483,7 @@
       "file_type": "rationale",
       "norm_label": "push sidebar runtime knobs into the frozen settings for this run.",
       "source_file": "app.py",
-      "source_location": "L59"
+      "source_location": "L54"
     },
     {
       "id": "basemodel",
@@ -1585,7 +1585,7 @@
       "source_location": "L1"
     },
     {
-      "id": "src_research_agent_config_rationale_89",
+      "id": "src_research_agent_config_rationale_76",
       "label": "Instantiate a chat model from a \"provider:model\" string. `init_chat_model` has\u2026",
       "_origin": "ast",
       "community": 26,
@@ -1593,7 +1593,7 @@
       "file_type": "rationale",
       "norm_label": "instantiate a chat model from a \"provider:model\" string. `init_chat_model` has...",
       "source_file": "src/research_agent/config.py",
-      "source_location": "L89"
+      "source_location": "L76"
     },
     {
       "id": "src_research_agent_graph_rationale_1",
@@ -2270,7 +2270,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.py",
-      "source_location": "L154",
+      "source_location": "L149",
       "weight": 1.0
     },
     {
@@ -2282,7 +2282,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.py",
-      "source_location": "L155",
+      "source_location": "L150",
       "weight": 1.0
     },
     {
@@ -2294,7 +2294,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.py",
-      "source_location": "L157",
+      "source_location": "L152",
       "weight": 1.0
     },
     {
@@ -2306,7 +2306,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.py",
-      "source_location": "L111",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -2318,7 +2318,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.py",
-      "source_location": "L112",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -2330,7 +2330,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.py",
-      "source_location": "L122",
+      "source_location": "L117",
       "weight": 1.0
     },
     {
@@ -2342,7 +2342,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L35",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -2354,19 +2354,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L48",
-      "weight": 1.0
-    },
-    {
-      "source": "src_research_agent_agents_researcher_build_researcher_node",
-      "target": "src_research_agent_config_build_chat_model",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L100",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -2378,7 +2366,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L112",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -2390,7 +2378,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L72",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "src_research_agent_agents_researcher_build_researcher_node",
+      "target": "src_research_agent_config_build_chat_model",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/research_agent/agents/researcher.py",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -2402,7 +2402,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L177",
+      "source_location": "L166",
       "weight": 1.0
     },
     {
@@ -2414,7 +2414,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L194",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -2426,7 +2426,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L197",
+      "source_location": "L186",
       "weight": 1.0
     },
     {
@@ -2438,7 +2438,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L201",
+      "source_location": "L190",
       "weight": 1.0
     },
     {
@@ -2450,7 +2450,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L219",
+      "source_location": "L208",
       "weight": 1.0
     },
     {
@@ -2462,7 +2462,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L107",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -2474,7 +2474,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L96",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -2486,7 +2486,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L97",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -2498,7 +2498,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L61",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -2678,7 +2678,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L57",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -2762,7 +2762,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L23",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -2774,7 +2774,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L24",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -2786,7 +2786,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L25",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -2798,7 +2798,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L25",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -2930,7 +2930,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app.py",
-      "source_location": "L29",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -2942,7 +2942,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app.py",
-      "source_location": "L30",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -2954,7 +2954,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app.py",
-      "source_location": "L31",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -3002,7 +3002,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L23",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -3014,7 +3014,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L24",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -3026,7 +3026,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L25",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -3206,7 +3206,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L59",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -3218,7 +3218,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L55",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -3230,7 +3230,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L64",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -3254,7 +3254,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L69",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -3282,7 +3282,7 @@
     },
     {
       "source": "app",
-      "target": "app_render_report",
+      "target": "app_run",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3293,24 +3293,13 @@
     },
     {
       "source": "app",
-      "target": "app_run",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.py",
-      "source_location": "L109",
-      "weight": 1.0
-    },
-    {
-      "source": "app",
       "target": "app_render_result",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L150",
+      "source_location": "L145",
       "weight": 1.0
     },
     {
@@ -3321,7 +3310,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L38",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -3332,7 +3321,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L49",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -3343,7 +3332,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L58",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -3354,7 +3343,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L66",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -3365,7 +3354,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L78",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -3376,7 +3365,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L85",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_render_report",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.py",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
@@ -4289,7 +4289,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L145",
+      "source_location": "L138",
       "weight": 1.0
     },
     {
@@ -4300,7 +4300,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L167",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -4311,7 +4311,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L208",
+      "source_location": "L197",
       "weight": 1.0
     },
     {
@@ -4322,7 +4322,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L218",
+      "source_location": "L207",
       "weight": 1.0
     },
     {
@@ -4333,7 +4333,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L57",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -4344,7 +4344,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L55",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -4355,7 +4355,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L59",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -4366,7 +4366,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L64",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -4377,7 +4377,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L69",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -4410,7 +4410,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/config.py",
-      "source_location": "L88",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -4612,36 +4612,36 @@
       "weight": 1.0
     },
     {
-      "source": "app_rationale_110",
+      "source": "app_rationale_105",
       "target": "app_run",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L110",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
-      "source": "app_rationale_39",
+      "source": "app_rationale_34",
       "target": "app_kb_dir_candidates",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L39",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
-      "source": "app_rationale_59",
+      "source": "app_rationale_54",
       "target": "app_apply_overrides",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.py",
-      "source_location": "L59",
+      "source_location": "L54",
       "weight": 1.0
     },
     {
@@ -4678,47 +4678,47 @@
       "weight": 1.0
     },
     {
-      "source": "src_research_agent_agents_researcher_rationale_146",
+      "source": "src_research_agent_agents_researcher_rationale_139",
       "target": "src_research_agent_agents_researcher_content_to_text",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L146",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
-      "source": "src_research_agent_agents_researcher_rationale_168",
+      "source": "src_research_agent_agents_researcher_rationale_161",
       "target": "src_research_agent_agents_researcher_extract_findings",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L168",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
-      "source": "src_research_agent_agents_researcher_rationale_209",
+      "source": "src_research_agent_agents_researcher_rationale_198",
       "target": "src_research_agent_agents_researcher_looks_complete",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L209",
+      "source_location": "L198",
       "weight": 1.0
     },
     {
-      "source": "src_research_agent_agents_researcher_rationale_58",
+      "source": "src_research_agent_agents_researcher_rationale_51",
       "target": "src_research_agent_agents_researcher_build_researcher_node",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L58",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -4733,14 +4733,14 @@
       "weight": 1.0
     },
     {
-      "source": "src_research_agent_agents_retry_rationale_78",
+      "source": "src_research_agent_agents_retry_rationale_76",
       "target": "src_research_agent_agents_retry_call_with_model_rotation",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/agents/_retry.py",
-      "source_location": "L78",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -4766,14 +4766,14 @@
       "weight": 1.0
     },
     {
-      "source": "src_research_agent_config_rationale_89",
+      "source": "src_research_agent_config_rationale_76",
       "target": "src_research_agent_config_build_chat_model",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/research_agent/config.py",
-      "source_location": "L89",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -4962,7 +4962,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "app.py",
-      "source_location": "L50",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -4974,7 +4974,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "app.py",
-      "source_location": "L78",
+      "source_location": "L73",
       "weight": 0.8
     },
     {
@@ -4986,7 +4986,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L208",
+      "source_location": "L197",
       "weight": 0.8
     },
     {
@@ -5010,7 +5010,7 @@
       "confidence_score": 0.95,
       "context": "return_type",
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L167",
+      "source_location": "L160",
       "weight": 0.8
     },
     {
@@ -5021,7 +5021,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "app.py",
-      "source_location": "L130",
+      "source_location": "L125",
       "weight": 0.8
     },
     {
@@ -5032,7 +5032,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L36",
+      "source_location": "L34",
       "weight": 0.8
     },
     {
@@ -5043,7 +5043,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "src/research_agent/agents/planner.py",
-      "source_location": "L47",
+      "source_location": "L45",
       "weight": 0.8
     },
     {
@@ -5054,7 +5054,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "src/research_agent/agents/researcher.py",
-      "source_location": "L62",
+      "source_location": "L55",
       "weight": 0.8
     },
     {
@@ -5081,5 +5081,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "30c91b3ad3524883c282ee2dcc3991ae543e8182"
+  "built_at_commit": "77d3f4aa408be017d0ce54de9fbd0201e5af7aaa"
 }

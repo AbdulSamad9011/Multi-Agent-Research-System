@@ -1,7 +1,7 @@
 # Graph Report - research_agent  (2026-08-20)
 
 ## Corpus Check
-- 32 files · ~19,068 words
+- 32 files · ~18,762 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `30c91b3a`
+- Built from commit: `77d3f4aa`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -116,7 +116,7 @@ Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphif
 
 ### Community 22 - "researcher.py"
 Cohesion: 0.15
-Nodes (21): Exception, build_researcher_node(), _content_to_text(), _extract_findings(), _fallback_findings(), _looks_complete(), BaseTool, Researcher node: manual tool-calling loop + structured extraction pass. Why not… (+13 more)
+Nodes (21): Exception, build_researcher_node(), _content_to_text(), _extract_findings(), _fallback_findings(), _looks_complete(), BaseTool, Researcher: manual tool-calling loop + structured extraction pass.… (+13 more)
 
 ### Community 25 - "app.py"
 Cohesion: 0.22

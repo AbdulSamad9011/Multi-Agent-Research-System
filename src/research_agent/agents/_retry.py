@@ -25,10 +25,8 @@ _RATE_LIMIT_MARKERS = (
     "service unavailable",
 )
 _DAILY_MARKERS = ("PerDay", "per_day", "requests_per_day", "requestsPerDay")
-# Provider can't/won't serve this model for this request: unsupported feature
-# (tool calling / structured output / json mode), gated or 404'd model, or
-# unauthorized token. Not a transient error, but also not fatal for the whole
-# run — skip the model and try the next one in rotation.
+# Provider can't/won't serve this model for this request (unsupported feature,
+# gated/404 model, bad token). Not fatal — skip the model and try the next one.
 _UNSUPPORTED_MARKERS = (
     "not supported",
     "not implemented",

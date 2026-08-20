@@ -2,18 +2,13 @@
 
 Run with:  streamlit run app.py
 
-Exposes the pipeline (planner -> parallel researcher sub-agents using RAG +
-live web search -> summarizer) as an interactive page, with live node-level
-progress, the research plan, per-subagent findings, and the final report.
-
-Design notes for resiliency:
-- A failed researcher branch never aborts the run (it returns a "failed"
-  findings entry); a planner/summarizer failure is surfaced as an error but
-  any partial results already collected are still rendered.
-- Results are persisted in `st.session_state["result"]`, so toggling sidebar
-  widgets (which trigger script reruns) cannot wipe the last report.
-- Runtime knobs in the sidebar override the frozen `Settings` dataclass for
-  the current run only (object.__setattr__).
+Resiliency notes:
+- A failed researcher branch renders a "failed" findings entry instead of
+  aborting the run; planner/summarizer failures surface as an error while any
+  partial results already collected are still rendered.
+- Results persist in st.session_state["result"], so sidebar widget reruns
+  don't wipe the last report.
+- Sidebar runtime knobs override the frozen Settings for the current run only.
 """
 from __future__ import annotations
 
