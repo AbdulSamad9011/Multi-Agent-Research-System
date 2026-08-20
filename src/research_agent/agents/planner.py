@@ -8,6 +8,7 @@ from __future__ import annotations
 from langchain.chat_models import init_chat_model
 from langchain_core.messages import HumanMessage, SystemMessage
 
+from research_agent.agents._retry import call_with_model_rotation
 from research_agent.config import settings
 from research_agent.state import ResearchPlan, ResearchState
 
@@ -27,15 +28,27 @@ another subtopic's findings to be researched.""".format(
 
 
 def build_planner():
-    model = init_chat_model(settings.planner_model)
-    structured_model = model.with_structured_output(ResearchPlan)
+    # method="json_schema" is the most portable structured-output mode across
+    # providers. The default function-calling method is unsupported/unreliable
+    # on several Groq models ("Tool choice is required, but model did not call
+    # a tool" / tool_use_failed / json_validate_failed).
+    def make_structured(model_str: str):
+        model = init_chat_model(model_str)
+        return model.with_structured_output(ResearchPlan, method="json_schema")
 
-    def planner_node(state: ResearchState) -> dict:
-        plan: ResearchPlan = structured_model.invoke(
+    def invoke_planner(structured_model, system_prompt: str, query: str) -> ResearchPlan:
+        return structured_model.invoke(
             [
                 SystemMessage(content=_PLANNER_SYSTEM_PROMPT),
-                HumanMessage(content=state["query"]),
+                HumanMessage(content=query),
             ]
+        )
+
+    def planner_node(state: ResearchState) -> dict:
+        plan: ResearchPlan = call_with_model_rotation(
+            settings.planner_models,
+            make_structured,
+            lambda m: invoke_planner(m, _PLANNER_SYSTEM_PROMPT, state["query"]),
         )
         return {"plan": plan}
 

@@ -1,0 +1,35 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.venv/
+venv/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+
+# --- Local environment (keep .env.example tracked) ---
+.env
+.env.local
+.env.*.local
+
+# --- Graphify: regenerable artifacts only.
+#     graph.json / GRAPH_REPORT.md / graph.html / GRAPH_TREE.html are the
+#     committed deliverables and stay tracked. cost.json + the AST cache are
+#     machine-local and recreated on every run. ---
+graphify-out/cache/
+graphify-out/cost.json
+graphify-out/reflections/
+graphify-out/memory/
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo
+*~

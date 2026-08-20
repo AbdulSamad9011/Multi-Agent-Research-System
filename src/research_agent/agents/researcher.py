@@ -14,6 +14,7 @@ from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage
 from langchain_core.tools import BaseTool
 
+from research_agent.agents._retry import call_with_model_rotation
 from research_agent.config import settings
 from research_agent.state import ResearcherTask, SubAgentFindings
 
@@ -41,27 +42,43 @@ def build_researcher_node(tools: List[BaseTool]):
     def researcher_node(task: ResearcherTask) -> dict:
         subtopic = task["subtopic"]
 
-        agent = create_agent(
-            model=settings.researcher_model,
-            tools=tools,
-            system_prompt=_RESEARCHER_SYSTEM_PROMPT.format(
-                role=subtopic.role, objective=subtopic.objective
-            ),
-            response_format=SubAgentFindings,
-            name=f"researcher-{subtopic.id}",
-        )
+        def build_run(model_str: str):
+            return create_agent(
+                model=model_str,
+                tools=list(tools),
+                system_prompt=_RESEARCHER_SYSTEM_PROMPT.format(
+                    role=subtopic.role, objective=subtopic.objective
+                ),
+                response_format=SubAgentFindings,
+                name=f"researcher-{subtopic.id}",
+            )
 
-        result = agent.invoke(
-            {
-                "messages": [
-                    HumanMessage(
-                        content=(
-                            f"Overall research question: {task['query']}\n"
-                            f"Your subtopic: {subtopic.title}"
+        def invoke_run(agent):
+            return agent.invoke(
+                {
+                    "messages": [
+                        HumanMessage(
+                            content=(
+                                f"Overall research question: {task['query']}\n"
+                                f"Your subtopic: {subtopic.title}"
+                            )
                         )
-                    )
-                ]
-            }
+                    ]
+                }
+            )
+
+        result = call_with_model_rotation(
+            settings.researcher_models,
+            build_run,
+            invoke_run,
+            max_attempts=8,
+            # Stagger parallel branches so each one starts on a different model
+            # (all 4 branches hitting model[0] at once = instant throttle).
+            start_index=(
+                hash(subtopic.id) % len(settings.researcher_models)
+                if len(settings.researcher_models) > 1
+                else 0
+            ),
         )
 
         findings: SubAgentFindings = result["structured_response"]

@@ -7,11 +7,14 @@ from __future__ import annotations
 import sys
 import uuid
 
+# config.py already loads .env before any research_agent import; keep this
+# here only as a safety net (move ABOVE the research_agent import — dotenv
+# must run before config.py reads PLANNER_MODEL / API keys).
 from dotenv import load_dotenv
 
-from research_agent.graph import build_graph
-
 load_dotenv()
+
+from research_agent.graph import build_graph
 
 
 def run(query: str, rag_source_dir: str | None = None) -> str:
