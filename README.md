@@ -6,7 +6,7 @@
 ![LangGraph](https://img.shields.io/badge/orchestration-LangGraph-1C3C3C)
 ![LangChain](https://img.shields.io/badge/agents-LangChain-1C3C3C)
 ![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B)
-![License](https://img.shields.io/badge/license-unspecified-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-Red)
 
 ## Table of Contents
 
